@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+
 
 
 @Component({
@@ -9,10 +9,16 @@ import {MatMenuModule} from '@angular/material/menu';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+    @Output() click: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  scrollingToPosition(idNameOfSection){
+    this.click.emit(idNameOfSection);
   }
 
 }
