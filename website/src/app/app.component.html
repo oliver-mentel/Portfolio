@@ -1,17 +1,22 @@
+
+<header>
+<app-header (click)='scrollTo($event)' class="header"></app-header>
+</header>
 <body>
-<app-header (click)='scrollTo($event)'></app-header>
-  <div #home id="home">
+  <div id="home">
 <app-home></app-home>
 </div>
-<div #aboutMe  id="aboutMe">
+<div id="aboutMe">
 <app-about-me></app-about-me>
 </div>
-<div #projects  id="projects">
+<div id="projects">
 <app-projects></app-projects>
 </div>
-<div #contact  id="contact">
+<div  id="contact">
 <app-contact></app-contact>
 </div>
-<app-footer></app-footer>
-
+<footer><app-footer></app-footer></footer>
 </body>
+
+
+

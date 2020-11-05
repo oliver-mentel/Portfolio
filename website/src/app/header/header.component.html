@@ -1,5 +1,5 @@
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,22 +7,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <!-- <a class="nav-link" (click)="scroll(home)" style="cursor: pointer;">Home <span class="sr-only">(current)</span></a> -->
           <a class="nav-link" style="cursor: pointer;" (click)="scrollingToPosition('home')">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" (click)="scroll(aboutMe)" style="cursor: pointer;">About Me</a> -->
           <a class="nav-link"  style="cursor: pointer;" (click)="scrollingToPosition('aboutMe')">About Me</a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" (click)="scroll(projects)" style="cursor: pointer;">Projects</a> -->
           <a class="nav-link" style="cursor: pointer;" (click)="scrollingToPosition('projects')">Projects</a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" (click)="scroll(contact)" style="cursor: pointer;">Contact</a> -->
           <a class="nav-link" style="cursor: pointer;" (click)="scrollingToPosition('contact')">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
-  </div>
+
