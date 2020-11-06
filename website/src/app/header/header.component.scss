@@ -1,1 +1,39 @@
+.navbar.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light {
+  padding-left: 10%;
+  width: 50%;
+  // border-bottom: dashed white 2px;
+  background: transparent !important;
+}
 
+ .navbar .nav-link{
+  color: #16293b;
+  font-weight: 200;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+ .navbar .navbar-toggler {
+  border-style: none !important;
+  // border-color: white;
+
+}
+
+ul :hover {
+color: white !important;
+}
+
+.navbar .navbar-nav {
+  margin-left: 50px;
+}
+
+.active_route {
+  border: dashed 2px white;
+  color: white !important;
+}
+
+.bar {
+  width: 35px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+}

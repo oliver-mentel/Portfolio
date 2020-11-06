@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 
 
@@ -17,7 +17,9 @@ export class AboutMeComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
+
+
 
 }

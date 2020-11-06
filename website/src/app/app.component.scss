@@ -4,3 +4,20 @@ body {
 footer{
   width: auto;
 }
+
+
+.content {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: fixed;
+  height: 50px;
+  display: flex;
+}
+
+.nav.hide-nav {
+  display: none; /* You can play on opacity for nice transitions*/
+}

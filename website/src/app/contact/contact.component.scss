@@ -1,26 +1,36 @@
-.col-sm-6 {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  max-width: 100%;
-}
+// .col-sm-6 {
+//   padding-right: 0px !important;
+//   padding-left: 0px !important;
+//   max-width: 100%;
+// }
 
 #right-box {
   height: 100vh;
-  width: auto;
   background-color: #346e93;
   border-bottom: 2px dashed white;
 }
 
 #left-box {
   height: 100vh;
-  width: auto;
+  padding: 0;
   border-right: 2px dashed white;
 }
 
 #left-box-empty {
   border-right: 2px dashed white;
   height: 50vh;
-  width: auto;
+  padding: 0;
+
+}
+
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
 }
 
 .darken-lower-part {
@@ -55,7 +65,7 @@ img.display {
   font-weight: 400;
   text-align: center;
   margin: 0 0 40px;
-  padding-top: 40%;
+  padding-top: 45%;
   text-transform: uppercase;
   display: block;
 }
