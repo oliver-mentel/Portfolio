@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleIcon(event) {
+   event.srcElement.classList.add("is-active");
+  }
+
 
   scrollingToPosition(idNameOfSection){
     this.click.emit(idNameOfSection);

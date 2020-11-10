@@ -1,7 +1,80 @@
 <!-- Boxes About Me -->
+
+<!-- When screen width is smaller than 992px -->
+<div *ngIf="!isBiggerThan992px">
+  <section>
+    <!-- Left Box-->
+    <div class="row is-flex">
+      <div class="col-md-12 col-lg-6" id="right-box">
+        <h2 class="heading">Contact</h2>
+      </div>
+
+      <!-- Right Box -->
+      <div class="col-md-12 col-lg-6" id="left-box">
+        <h2 class="contact-title">Interested?</h2>
+        <h5 class="contact-description">
+          Please leave you contact details bellow and I will try my very best to
+          contact you as soon as possible.
+        </h5>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="Email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  formControlName="Email"
+                />
+
+              </div>
+              <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Fullname"
+                  placeholder="Full Name"
+                  formControlName="Fullname"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea
+                  class="form-control"
+                  formControlName="Comment"
+                  name="Comment"
+                >
+                </textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="!FormData.valid"
+              >
+                <i class="far fa-paper-plane" id="plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+<!-- When screen width is greater than 992px -->
+<div *ngIf="isBiggerThan992px">
 <section>
+  <!-- Left Box-->
   <div class="row is-flex">
-    <div class="col-sm-6" id="left-box">
+    <div class="col-md-12 col-lg-6" id="left-box">
       <h2 class="contact-title">Interested?</h2>
       <h5 class="contact-description">
         Please leave you contact details bellow and I will try my very best to
@@ -9,7 +82,7 @@
       </h5>
 
       <div class="row">
-        <div class="col-sm-6 offset-md-3">
+        <div class="col-sm-12">
           <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
             <div class="form-group">
               <label for="Email">Email</label>
@@ -56,11 +129,13 @@
       </div>
     </div>
 
-    <div class="col-sm-6" id="right-box">
+    <!-- Right Box -->
+    <div class="col-md-12 col-lg-6" id="right-box">
       <h2 class="heading">Contact</h2>
     </div>
   </div>
 </section>
+</div>
 
 <!-- Empty row for dashed line-->
 <section>
