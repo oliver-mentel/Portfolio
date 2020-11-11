@@ -1,5 +1,5 @@
 <!-- Boxes About Me -->
-
+<div (window:resize)="onResize($event)">
 <!-- When screen width is smaller than 992px -->
 <div *ngIf="!isBiggerThan992px">
   <section>
@@ -144,3 +144,4 @@
     <div class="col-sm-6" id="right-box-empty"></div>
   </div>
 </section>
+</div>

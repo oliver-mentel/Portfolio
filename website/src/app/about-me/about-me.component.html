@@ -1,5 +1,5 @@
 <!-- Boxes About Me -->
-
+<div (window:resize)="onResize($event)">
 <!-- If screen is smaller than 992px width, place About Me box first/ above slideshow -->
 <div *ngIf="!isBiggerThan992px">
 <!-- <ng-template #IsSmallerThan992px> -->
@@ -72,6 +72,7 @@
 <!-- </ng-template> -->
 </div>
 
+
 <div *ngIf="isBiggerThan992px">
   <section>
     <div class="row is-flex">
@@ -140,6 +141,7 @@
     </div>
   </section>
 </div>
+
 
 <!-- Empty row for dashed line-->
 <section>
@@ -305,3 +307,4 @@
     <div class="col-6" id="right-box-empty-low"></div>
   </div>
 </section>
+</div>

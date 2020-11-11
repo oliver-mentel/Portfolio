@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { ContactService } from '../contact.service';
 
@@ -13,6 +13,17 @@ export class ContactComponent implements OnInit {
   isBiggerThan992px = true;
 
   constructor(private builder: FormBuilder, private contact: ContactService) { }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if(event.target.innerWidth >= 992){
+      this.isBiggerThan992px = true;
+      console.log(this.isBiggerThan992px);
+    } else {
+      this.isBiggerThan992px = false;
+    }
+    console.log(window.innerWidth)
+  }
 
   ngOnInit() {
     this.FormData = this.builder.group({

@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from './contact.service';
+import {CommonModule} from "@angular/common";
 
 
 
@@ -35,9 +36,8 @@ import { ContactService } from './contact.service';
     CarouselModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-
-
+    HttpClientModule,
+    CommonModule
   ],
   providers: [
     ContactService

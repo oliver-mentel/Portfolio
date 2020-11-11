@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, OnChanges } from '@angular/core';
+import { Component, OnInit, ElementRef, OnChanges, HostListener } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 
 
@@ -12,10 +12,28 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
   ]
 })
 export class AboutMeComponent implements OnInit {
+
+
+
   isBiggerThan992px = true;
 
   constructor() {
 
+  }
+
+  // onResize(event) {
+  //   event.target.innerWidth;
+  // }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if(event.target.innerWidth >= 992){
+      this.isBiggerThan992px = true;
+      console.log(this.isBiggerThan992px);
+    } else {
+      this.isBiggerThan992px = false;
+    }
+    console.log(window.innerWidth)
   }
 
   ngOnInit(){
@@ -27,18 +45,6 @@ export class AboutMeComponent implements OnInit {
     }
     console.log(window.innerWidth)
   }
-
-
-
-  // ngOnChanges(){
-  //   if(window.innerWidth >= 992){
-  //     this.isBiggerThan992px = true;
-  //     console.log(this.isBiggerThan992px);
-  //   } else {
-  //     this.isBiggerThan992px = false;
-  //   }
-  //   console.log(window.innerWidth)
-  // }
 
 
 

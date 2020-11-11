@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 
 
@@ -11,14 +12,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
     @Output() click: EventEmitter<any> = new EventEmitter();
 
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleIcon(event) {
-   event.srcElement.classList.add("is-active");
-  }
+  // toggleIcon(event) {
+  // //  event.srcElement.classList.add("is-active");
+  // // }
 
 
   scrollingToPosition(idNameOfSection){

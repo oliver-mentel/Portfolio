@@ -22,11 +22,18 @@
     aria-controls="navbarNav"
     aria-expanded="false"
     aria-label="Toggle navigation"
-  >  <button class="hamburger hamburger--spring" type="button" (click)="toggleIcon($event)">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button></button>
+  >
+    <button
+      class="hamburger hamburger--spring"
+      type="button"
+      (click)="active=!active"
+      [ngClass]="active ? 'is-active' : ''"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
@@ -63,4 +70,3 @@
     </ul>
   </div>
 </nav>
-
