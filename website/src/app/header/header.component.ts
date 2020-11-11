@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { trigger } from '@angular/animations';
 
 
 
@@ -11,7 +12,7 @@ import { NgClass } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
     @Output() click: EventEmitter<any> = new EventEmitter();
-
+active = false;
 
 
   constructor() { }

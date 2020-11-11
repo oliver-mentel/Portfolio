@@ -15,20 +15,15 @@ ngOnInit() {
 
 }
 
+// Scrolls to section as clicked from header component.
 scrollTo(event){
   document.getElementById(event).scrollIntoView({behavior: 'smooth'});
 }
 
-// scrollTop = 0;
-// hideNav = false;
-
-// onScroll(event) {
-//   this.hideNav = this.scrollTop < event.target.scrollTop;
-//   this.scrollTop = event.target.scrollTop;
-// }
-
+      // Listener, tells which section the viewport is in.
       @ViewChildren(areas) sections: QueryList<ElementRef>;
 
+      // dentify which full height div block is currently displayed
       @HostListener('window:scroll', ['$event'])
       onScroll(event) {
         const activeSection = this.sections.toArray().findIndex(section => isElementInViewport(section.nativeElement));
@@ -37,9 +32,12 @@ scrollTo(event){
 
       }
     }
+
+    // Creates a rectangle on the viewport to distinguish which section is active.
     function isElementInViewport(el) {
       var rect = el.getBoundingClientRect();
 
+      // check if specific section is inside viewport by using helper
       return (
         rect.bottom >= 1 &&
         rect.right >= 0 &&

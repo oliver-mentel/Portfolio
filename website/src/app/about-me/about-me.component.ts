@@ -21,10 +21,6 @@ export class AboutMeComponent implements OnInit {
 
   }
 
-  // onResize(event) {
-  //   event.target.innerWidth;
-  // }
-
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if(event.target.innerWidth >= 992){
