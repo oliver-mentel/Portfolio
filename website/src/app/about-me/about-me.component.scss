@@ -56,11 +56,15 @@
 
 .img-slideshow {
   // background-color: white;
-  max-height: 100vh;
+  // max-height: 100vh;
   filter: opacity(75%);
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
+  // display: block;
+  // width: 100%;
+  // box-sizing: border-box;
+  width: 100%; // dimensions are mandatory
+	height: 100vh; // dimensions are mandatory
+	object-fit: cover;
+	overflow: hidden; // Cuts off the parts of the image poking out
 }
 
 img.display {
