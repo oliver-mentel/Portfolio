@@ -21,8 +21,8 @@
               Please leave your contact details bellow and I will try my very
               best to contact you as soon as possible.
             </h5>
-
-            <div class="row">
+            <div class="container-fluid">
+            <div class="row is-flex">
               <div class="col-sm-12">
                 <form
                   [formGroup]="FormData"
@@ -86,9 +86,13 @@
                       formControlName="comment"
                       name="comment"
                       placeholder="Please Leave a message"
+                      (keyup)="onKeyUp($event)"
                       required
                     >
                     </textarea>
+                    <div style="color: white; font-weight: 200;">
+                      {{numberOfCharacters1}} / {{maxNumberOfCharacters}}
+                    </div>
                     <span
                       class="text-danger"
                       *ngIf="
@@ -123,6 +127,7 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </section>
@@ -140,9 +145,9 @@
               Please leave you contact details bellow and I will try my very
               best to contact you as soon as possible.
             </h5>
-
-            <div class="row">
-              <div class="col-sm-12">
+            <div class="container-fluid">
+            <div class="row is-flex">
+              <div class="col-12">
                 <form
                   [formGroup]="FormData"
                   (ngSubmit)="onSubmit(FormData.value)"
@@ -206,9 +211,13 @@
                       placeholder="Please leave a message"
                       name="comment"
                       rows="4"
+                      (keyup)="onKeyUp($event)"
                       required
                     >
                     </textarea>
+                    <div style="color: white; font-weight: 200;">
+                      {{numberOfCharacters1}} / {{maxNumberOfCharacters}}
+                    </div>
                     <span
                       class="text-danger"
                       *ngIf="
@@ -242,6 +251,7 @@
                 </form>
               </div>
             </div>
+          </div>
           </div>
 
           <!-- Right Box -->

@@ -1,5 +1,5 @@
 
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { ContactService } from '../contact.service';
 
@@ -13,9 +13,10 @@ export class ContactComponent implements OnInit {
   isBiggerThan992px = true;
   submitted = false;
 
-
-
-  message: string;
+  @Input()
+  numberOfCharacters1 = 0;
+  maxNumberOfCharacters = 1000;
+  counter = true;
 
   constructor(private builder: FormBuilder, private contact: ContactService) { }
 
@@ -63,6 +64,15 @@ export class ContactComponent implements OnInit {
         console.warn(error.responseText)
         console.log({ error })
       })
+  }
+
+  onKeyUp(event: any): void {
+    this.numberOfCharacters1 = event.target.value.length;
+
+    if (this.numberOfCharacters1 > this.maxNumberOfCharacters) {
+      event.target.value = event.target.value.slice(0, this.maxNumberOfCharacters);
+      this.numberOfCharacters1 = this.maxNumberOfCharacters;
+    }
   }
 
 

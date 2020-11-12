@@ -1,8 +1,8 @@
-// .col-sm-6 {
-//   padding-right: 0px !important;
-//   padding-left: 0px !important;
-//   max-width: 100%;
-// }
+.col-sm-12 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+
+}
 
 #right-box {
   height: 100vh;
@@ -14,14 +14,19 @@
 
 #left-box {
   height: 100vh;
-  padding: 0 !important;
+  padding: 0px !important;
   border-right: 2px dashed white;
   border-bottom: 2px dashed white;
   border-top: 2px dashed white;
 }
 
-#left-box-empty, #right-box-empty {
+#left-box-empty {
   border-right: 2px dashed white;
+  height: 50vh;
+  padding: 0 !important;
+}
+
+#right-box-empty {
   height: 50vh;
   padding: 0 !important;
 }
@@ -82,7 +87,7 @@ img.display {
 
 .contact-description {
   font-weight: 700;
-  padding: 0px 100px 0px 100px;
+  padding: 0px 50px;
   color: white;
   text-align: center;
   font-weight: 300;
@@ -128,6 +133,8 @@ button {
 .form-group {
   padding: 0px 50px;
   margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .text-danger {
