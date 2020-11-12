@@ -1,21 +1,10 @@
-// .col-sm {
-//   padding-right: 0px !important;
-//   padding-left: 0px !important;
-
-// }
-
-// .dummy {
-//   margin-top: 100%;
-// }
-
-
 
 #left-box {
   background-color: #346E93;
   border-right: 2px dashed white;
   border-bottom: 2px dashed white;
   justify-content: center;
-  display: block;
+  // display: block;
   padding: 0 !important;
   height: 100vh;
 }
@@ -42,6 +31,7 @@
   position: relative;
   text-align: center;
   color: white;
+  object-fit: cover;
   // display: inline-block;
   // overflow: hidden;
 }
@@ -64,12 +54,12 @@ img {
 
 .heading {
   color: rgb(255, 255, 255);
-  font-size: 4vw;
+  font-size: 4em;
   font-weight: 400;
   text-align: center;
   margin: 0 0 40px;
   text-transform: uppercase;
-  display: block;
-  padding-top: 45%;
+  // display: block;
+  // padding-top: 45%;
 }
 

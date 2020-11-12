@@ -11,6 +11,11 @@ import { ContactService } from '../contact.service';
 export class ContactComponent implements OnInit {
   FormData: FormGroup;
   isBiggerThan992px = true;
+  submitted = false;
+
+
+
+  message: string;
 
   constructor(private builder: FormBuilder, private contact: ContactService) { }
 
@@ -27,10 +32,12 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.FormData = this.builder.group({
-      Fullname: new FormControl('', [Validators.required]),
-      Email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
-      Comment: new FormControl('', [Validators.required])
+      fullName: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
+      comment: new FormControl('', [Validators.compose([Validators.required, Validators.maxLength(1000)])])
     });
+
+
 
     if(window.innerWidth >= 992){
       this.isBiggerThan992px = true;
@@ -41,7 +48,12 @@ export class ContactComponent implements OnInit {
     console.log(window.innerWidth)
   }
 
+  get registerFormControl() {
+    return this.FormData.controls;
+  }
+
   onSubmit(FormData) {
+    this.submitted = true;
     console.log(FormData)
     this.contact.PostMessage(FormData)
       .subscribe(response => {

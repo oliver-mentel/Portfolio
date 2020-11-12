@@ -1,152 +1,269 @@
 <!-- Boxes About Me -->
 <div (window:resize)="onResize($event)">
-<!-- When screen width is smaller than 992px -->
-<div *ngIf="!isBiggerThan992px">
-  <section>
-    <!-- Left Box-->
-    <div class="container-fluid">
-    <div class="row is-flex">
-      <div class="col-md-12 col-lg-6" id="right-box">
-        <h2 class="heading">Contact</h2>
-      </div>
-
-      <!-- Right Box -->
-      <div class="col-md-12 col-lg-6" id="left-box">
-        <h2 class="contact-title">Interested?</h2>
-        <h5 class="contact-description">
-          Please leave your contact details bellow and I will try my very best to
-          contact you as soon as possible.
-        </h5>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
-              <div class="form-group">
-                <label for="Email">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="Email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  formControlName="Email"
-                />
-
+  <!-- When screen width is smaller than 992px -->
+  <div *ngIf="!isBiggerThan992px">
+    <section>
+      <!-- Left Box-->
+      <div class="container-fluid">
+        <div class="row is-flex">
+          <div class="col-md-12 col-lg-6" id="right-box">
+            <div style="display: table">
+              <div style="display: table-cell; vertical-align: middle">
+                <h2 class="heading">Contact</h2>
               </div>
-              <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="Fullname"
-                  placeholder="Full Name"
-                  formControlName="Fullname"
-                />
-              </div>
+            </div>
+          </div>
 
-              <div class="form-group">
-                <label for="comment">Comment</label>
-                <textarea
-                  class="form-control"
-                  formControlName="Comment"
-                  name="Comment"
+          <!-- Right Box -->
+          <div class="col-md-12 col-lg-6" id="left-box">
+            <h2 class="contact-title">Interested?</h2>
+            <h5 class="contact-description">
+              Please leave your contact details bellow and I will try my very
+              best to contact you as soon as possible.
+            </h5>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <form
+                  [formGroup]="FormData"
+                  (ngSubmit)="onSubmit(FormData.value)"
                 >
-                </textarea>
-              </div>
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                      formControlName="email"
+                      required
+                    />
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.email.touched || submitted) &&
+                        registerFormControl.email.errors?.required
+                      "
+                    >
+                      Email is required
+                    </span>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        registerFormControl.email.touched &&
+                        registerFormControl.email.errors?.email
+                      "
+                    >
+                      Enter a valid email address
+                    </span>
+                  </div>
+                  <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="fullName"
+                      placeholder="Full Name"
+                      formControlName="fullName"
+                      required
+                    />
+                    <span
+                    class="text-danger"
+                      *ngIf="
+                        (registerFormControl.fullName.touched || submitted) &&
+                        registerFormControl.fullName.errors?.required
+                      "
+                    >
+                      Full Name is required
+                    </span>
+                  </div>
 
-              <button
-                type="submit"
-                class="btn btn-primary"
-                [disabled]="!FormData.valid"
-              >
-                <i class="far fa-paper-plane" id="plane"></i>
-              </button>
-            </form>
+                  <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea
+                      class="form-control"
+                      formControlName="comment"
+                      name="comment"
+                      placeholder="Please Leave a message"
+                      required
+                    >
+                    </textarea>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.comment.touched || submitted) &&
+                        registerFormControl.comment.errors?.required
+                      "
+                    >
+                      Message is required
+                    </span>
+                    <span
+                    class="text-danger"
+                    *ngIf="
+
+
+                    (registerFormControl.comment.errors?.maxlength)
+                    "
+                  >
+                    Message is too long
+                  </span>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    [disabled]="!FormData.valid"
+                    [ngClass]="FormData.valid ? ' :hover' : '' "
+                  >
+                    <i class="far fa-paper-plane fa-2x"
+                    [ngClass]="FormData.valid ? ' :hover' : '' "></i>
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
+    </section>
   </div>
 
-<!-- When screen width is greater than 992px -->
-<div *ngIf="isBiggerThan992px">
-<section>
-  <!-- Left Box-->
-  <div class="container-fluid">
-  <div class="row is-flex">
-    <div class="col-md-12 col-lg-6" id="left-box">
-      <h2 class="contact-title">Interested?</h2>
-      <h5 class="contact-description">
-        Please leave you contact details bellow and I will try my very best to
-        contact you as soon as possible.
-      </h5>
+  <!-- When screen width is greater than 992px -->
+  <div *ngIf="isBiggerThan992px">
+    <section>
+      <!-- Left Box-->
+      <div class="container-fluid">
+        <div class="row is-flex">
+          <div class="col-md-12 col-lg-6" id="left-box">
+            <h2 class="contact-title">Interested?</h2>
+            <h5 class="contact-description">
+              Please leave you contact details bellow and I will try my very
+              best to contact you as soon as possible.
+            </h5>
 
-      <div class="row">
-        <div class="col-sm-12">
-          <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
-            <div class="form-group">
-              <label for="Email">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                name="Email"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-                formControlName="Email"
-              />
+            <div class="row">
+              <div class="col-sm-12">
+                <form
+                  [formGroup]="FormData"
+                  (ngSubmit)="onSubmit(FormData.value)"
+                >
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                      formControlName="email"
+                      required
+                    />
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.email.touched || submitted) &&
+                        registerFormControl.email.errors?.required
+                      "
+                    >
+                      Email is required
+                    </span>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        registerFormControl.email.touched &&
+                        registerFormControl.email.errors?.email
+                      "
+                    >
+                      Enter a valid email address
+                    </span>
+                  </div>
+                  <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="fullName"
+                      placeholder="Full Name"
+                      formControlName="fullName"
+                      required
+                    />
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.fullName.touched || submitted) &&
+                        registerFormControl.fullName.errors?.required
+                      "
+                    >
+                      Full Name is required
+                    </span>
+                  </div>
 
+                  <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea
+                      class="form-control"
+                      formControlName="comment"
+                      placeholder="Please leave a message"
+                      name="comment"
+                      rows="4"
+                      required
+                    >
+                    </textarea>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.comment.touched || submitted) &&
+                        registerFormControl.comment.errors?.required
+                      "
+                    >
+                      Message is required
+                    </span>
+                    <span
+                    class="text-danger"
+                    *ngIf="
+
+
+                    (registerFormControl.comment.errors?.maxlength)
+                    "
+                  >
+                    Message is too long
+                  </span>
+                  </div>
+
+                  <button
+                  type="submit"
+                  class="btn btn-primary"
+                  [disabled]="!FormData.valid"
+                  [ngClass]="FormData.valid ? ' :hover' : '' "
+                >
+                  <i class="far fa-paper-plane fa-2x"
+                  [ngClass]="FormData.valid ? ' :hover' : '' "></i>
+                </button>
+                </form>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="fullname">Full Name</label>
-              <input
-                type="text"
-                class="form-control"
-                name="Fullname"
-                placeholder="Full Name"
-                formControlName="Fullname"
-              />
-            </div>
+          </div>
 
-            <div class="form-group">
-              <label for="comment">Comment</label>
-              <textarea
-                class="form-control"
-                formControlName="Comment"
-                name="Comment"
-              >
-              </textarea>
+          <!-- Right Box -->
+          <div class="col-md-12 col-lg-6" id="right-box">
+            <div style="display: table">
+              <div style="display: table-cell; vertical-align: middle">
+                <h2 class="heading">Contact</h2>
+              </div>
             </div>
-
-            <button
-              type="submit"
-              class="btn btn-primary"
-              [disabled]="!FormData.valid"
-            >
-              <i class="far fa-paper-plane" id="plane"></i>
-            </button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Right Box -->
-    <div class="col-md-12 col-lg-6" id="right-box">
-      <h2 class="heading">Contact</h2>
-    </div>
+    </section>
   </div>
-</div>
-</section>
-</div>
 
-<!-- Empty row for dashed line-->
-<section>
-  <div class="container-fluid">
-  <div class="row is-flex">
-    <div class="col-sm-6" id="left-box-empty"></div>
-    <div class="col-sm-6" id="right-box-empty"></div>
-  </div>
-</div>
-</section>
+  <!-- Empty row for dashed line-->
+  <section>
+    <div class="container-fluid">
+      <div class="row is-flex">
+        <div class="col-sm-6" id="left-box-empty"></div>
+        <div class="col-sm-6" id="right-box-empty"></div>
+      </div>
+    </div>
+  </section>
 </div>

@@ -9,6 +9,7 @@
   background-color: #346e93;
   border-bottom: 2px dashed white;
   border-top: 2px dashed white;
+  justify-content: center;
 }
 
 #left-box {
@@ -62,20 +63,17 @@ img.display {
 
 .heading {
   color: white;
-  font-size: 4vw;
-  line-height: 95px;
+  font-size: 4em;
   font-weight: 400;
   text-align: center;
   margin: 0 0 40px;
-  padding-top: 45%;
   text-transform: uppercase;
-  display: block;
 }
 
 .contact-title {
   color: white;
   text-transform: uppercase;
-  padding: 100px 50px 0px 50px;
+  padding: 50px 50px 0px 50px;
   font-weight: 200;
   text-align: center;
   padding-bottom: 50px;
@@ -105,22 +103,37 @@ button {
   margin-right: auto;
   border: 2px dashed white;
   background-color:#1b3b4e !important;
+  cursor: default;
 }
 
-button :hover{
+.btn .btn-primary :hover{
   color:#ffffff !important;
   cursor: pointer;
 }
 
-#plane {
+.far .fa-paper-plane .fa-2x {
   font-size: x-large;
   text-decoration: none;
-  color: rgb(204, 204, 204)
+  color: rgb(204, 204, 204);
+  cursor: default;
+}
+
+.far .fa-paper-plane .fa-2x :hover {
+  font-size: x-large;
+  text-decoration: none;
+  color: rgb(0, 80, 230) !important;
+  cursor: pointer;
 }
 
 .form-group {
   padding: 0px 50px;
+  margin-bottom: 10px;
 }
+
+.text-danger {
+  color: red;
+}
+
 
 
 

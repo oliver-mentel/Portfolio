@@ -14,7 +14,7 @@
 #left-box {
   border-right: 2px dashed white;
   border-top: 2px dashed white;
-
+  justify-content: center;
   padding: 0;
   height: 100vh;
 }
@@ -62,14 +62,13 @@ h5 {
 
 .heading {
   color: white;
-  font-size: 4vw;
-  line-height: 95px;
+  font-size: 4em;
   font-weight: 400;
   text-align: center;
   margin: 0 0 40px;
-  padding-top: 45%;
+  // padding-top: 45%;
   text-transform: uppercase;
-  display: block;
+  // display: block;
 }
 
 .map {
