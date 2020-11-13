@@ -4,10 +4,12 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'AboutMe', component: AboutMeComponent },
+  { path: 'Skills', component: SkillsComponent },
   { path: 'Projects', component: ProjectsComponent },
   { path: 'Contact', component: ContactComponent },
 ];

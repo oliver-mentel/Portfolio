@@ -1,7 +1,6 @@
 .col-sm-12 {
   padding-right: 0px !important;
   padding-left: 0px !important;
-
 }
 
 #right-box {
@@ -13,12 +12,13 @@
 }
 
 #left-box {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0px !important;
   border-right: 2px dashed white;
   border-bottom: 2px dashed white;
   border-top: 2px dashed white;
 }
+
 
 #left-box-empty {
   border-right: 2px dashed white;
@@ -35,7 +35,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.row.is-flex > [class*='col-'] {
+.row.is-flex > [class*="col-"] {
   display: flex;
   flex-direction: column;
   padding-right: 0;
@@ -50,7 +50,6 @@
 }
 
 .img-slideshow {
-  // background-color: white;
   max-height: 100vh;
   filter: opacity(75%);
   display: block;
@@ -82,7 +81,6 @@ img.display {
   font-weight: 200;
   text-align: center;
   padding-bottom: 50px;
-
 }
 
 .contact-description {
@@ -97,22 +95,21 @@ img.display {
 label {
   color: white;
   font-weight: 200;
-
 }
-
 
 button {
   display: block;
   margin-top: 30px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   border: 2px dashed white;
-  background-color:#1b3b4e !important;
+  background-color: #1b3b4e !important;
   cursor: default;
 }
 
-.btn .btn-primary :hover{
-  color:#ffffff !important;
+.btn .btn-primary :hover {
+  color: #ffffff !important;
   cursor: pointer;
 }
 
@@ -141,6 +138,7 @@ button {
   color: red;
 }
 
-
-
-
+.char-counter {
+  font-weight: 200;
+  color: white;
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NgClass } from '@angular/common';
-import { trigger } from '@angular/animations';
+
 
 
 
@@ -18,12 +17,8 @@ active = false;
   constructor() { }
 
   ngOnInit(): void {
+
   }
-
-  // toggleIcon(event) {
-  // //  event.srcElement.classList.add("is-active");
-  // // }
-
 
   scrollingToPosition(idNameOfSection){
     this.click.emit(idNameOfSection);

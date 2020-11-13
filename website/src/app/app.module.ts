@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from './contact.service';
 import {CommonModule} from "@angular/common";
+import { SkillsComponent } from './skills/skills.component';
 
 
 
@@ -27,7 +28,8 @@ import {CommonModule} from "@angular/common";
     AboutMeComponent,
     ProjectsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

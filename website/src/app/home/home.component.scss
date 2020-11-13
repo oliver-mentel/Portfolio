@@ -4,7 +4,6 @@
   border-right: 2px dashed white;
   border-bottom: 2px dashed white;
   justify-content: center;
-  // display: block;
   padding: 0 !important;
   height: 100vh;
 }
@@ -32,8 +31,6 @@
   text-align: center;
   color: white;
   object-fit: cover;
-  // display: inline-block;
-  // overflow: hidden;
 }
 
 .image-text {
@@ -45,10 +42,6 @@
 
 
 img {
-  // width: 100%;
-  // height: auto;
-  // box-sizing: border-box;
-  // padding: 0;
   width: 100%; // dimensions are mandatory
 	height: 100vh; // dimensions are mandatory
 	object-fit: cover;
@@ -63,7 +56,5 @@ img {
   text-align: center;
   margin: 0 0 40px;
   text-transform: uppercase;
-  // display: block;
-  // padding-top: 45%;
 }
 
