@@ -1,8 +1,6 @@
 import {
   Component,
   OnInit,
-  ElementRef,
-  OnChanges,
   HostListener,
 } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';

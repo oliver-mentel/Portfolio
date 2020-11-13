@@ -1,25 +1,21 @@
-<!-- <div class="content" (scroll)="onScroll($event)"> -->
-  <header>
-    <!-- <div class="nav" [class.hide-nav]="hideNav"> -->
-      <app-header (click)="scrollTo($event)" class="header"></app-header>
-    <!-- </div> -->
-  </header>
-  <body >
-    <div id="home" (scroll)="onScroll($event)" #home>
-      <app-home ></app-home>
-    </div>
-    <div id="aboutMe" (scroll)="onScroll($event)" #aboutMe>
-      <app-about-me></app-about-me>
-    </div>
-    <div id="skills" (scroll)="onScroll($event)" #skills>
-      <app-skills></app-skills>
-    </div>
-    <div id="projects" (scroll)="onScroll($event)" #projects>
-      <app-projects></app-projects>
-    </div>
-    <div id="contact" (scroll)="onScroll($event)" #contact>
-      <app-contact></app-contact>
-    </div>
-    <footer><app-footer></app-footer></footer>
-  </body>
-<!-- </div> -->
+<header>
+  <app-header (click)="scrollTo($event)" class="header"></app-header>
+</header>
+<body>
+  <div id="home" (scroll)="onScroll($event)" #home>
+    <app-home></app-home>
+  </div>
+  <div id="aboutMe" (scroll)="onScroll($event)" #aboutMe>
+    <app-about-me></app-about-me>
+  </div>
+  <div id="skills" (scroll)="onScroll($event)" #skills>
+    <app-skills></app-skills>
+  </div>
+  <div id="projects" (scroll)="onScroll($event)" #projects>
+    <app-projects></app-projects>
+  </div>
+  <div id="contact" (scroll)="onScroll($event)" #contact>
+    <app-contact></app-contact>
+  </div>
+  <footer><app-footer></app-footer></footer>
+</body>

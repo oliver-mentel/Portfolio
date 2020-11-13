@@ -1,6 +1,6 @@
 #right-box {
   background-color: #346e93;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
   border-top: 2px dashed white;
 }
@@ -10,7 +10,7 @@
   border-top: 2px dashed white;
   justify-content: center;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .row.is-flex {

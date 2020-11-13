@@ -1,27 +1,19 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-
-
-
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @Output() click: EventEmitter<any> = new EventEmitter();
-active = false;
+  @Output() click: EventEmitter<any> = new EventEmitter();
+  active = false;
 
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-
-  }
-
-  scrollingToPosition(idNameOfSection){
+  scrollingToPosition(idNameOfSection) {
     this.click.emit(idNameOfSection);
   }
-
 }

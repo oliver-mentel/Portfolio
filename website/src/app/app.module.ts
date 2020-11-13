@@ -13,12 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from './contact.service';
-import {CommonModule} from "@angular/common";
+import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './skills/skills.component';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -29,7 +25,7 @@ import { SkillsComponent } from './skills/skills.component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,11 +35,9 @@ import { SkillsComponent } from './skills/skills.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
   ],
-  providers: [
-    ContactService
-  ],
-  bootstrap: [AppComponent]
+  providers: [ContactService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

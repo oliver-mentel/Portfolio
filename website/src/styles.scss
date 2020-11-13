@@ -1,20 +1,14 @@
-@import '~animate.css/animate.min';
+@import "~animate.css/animate.min";
 @import "~bootstrap/scss/bootstrap";
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
-
 html,
 body {
-    margin: 0;
-    padding: 0;
-    // width: 100%;
-    // height: 100%;
-  // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #346e93;
-  // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
