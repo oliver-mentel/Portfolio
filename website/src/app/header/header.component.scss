@@ -4,6 +4,16 @@
   background: transparent !important;
 }
 
+.add-blur {
+  transition: 2s -webkit-filter linear;
+  backdrop-filter: blur(6px);
+}
+
+.no-blur {
+  backdrop-filter: none;
+}
+
+
 .navbar .nav-link {
   color: #16293b;
   font-weight: 200;

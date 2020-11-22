@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <nav
     class="navbar fixed-top navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown"
-    id="navbar"
+    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)" (scroll)="changeStyle($event)"
   >
     <a
       class="navbar-brand"

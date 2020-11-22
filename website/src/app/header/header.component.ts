@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() click: EventEmitter<any> = new EventEmitter();
   active = false;
+  blur: string = '';
 
   constructor() {}
 
@@ -15,5 +16,9 @@ export class HeaderComponent implements OnInit {
 
   scrollingToPosition(idNameOfSection) {
     this.click.emit(idNameOfSection);
+  }
+
+  changeStyle($event) {
+    this.blur = $event.type == 'mouseover' ? 'add-blur' : '';
   }
 }
