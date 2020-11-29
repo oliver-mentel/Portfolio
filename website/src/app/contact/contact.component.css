@@ -1,0 +1,124 @@
+.col-sm-12 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#right-box {
+  height: 100vh;
+  background-color: #346e93;
+  border-bottom: 2px dashed white;
+  border-top: 2px dashed white;
+  justify-content: center;
+}
+
+#left-box {
+  min-height: 100vh;
+  padding: 0px !important;
+  border-right: 2px dashed white;
+  border-bottom: 2px dashed white;
+  border-top: 2px dashed white;
+}
+
+#left-box-empty {
+  border-right: 2px dashed white;
+  height: 50vh;
+  padding: 0 !important;
+}
+
+#right-box-empty {
+  height: 50vh;
+  padding: 0 !important;
+}
+
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.is-flex > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+}
+
+.container {
+  border: 2px dashed white;
+}
+
+.heading {
+  color: white;
+  font-size: 4em;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 40px;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  color: white;
+  text-transform: uppercase;
+  padding: 50px 50px 0px 50px;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contact-description {
+  font-weight: 700;
+  padding: 0px 50px;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+
+label {
+  color: white;
+  font-weight: 200;
+}
+
+button {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px dashed white;
+  background-color: #1b3b4e !important;
+  cursor: default;
+}
+
+.btn .btn-primary :hover {
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.far .fa-paper-plane .fa-2x {
+  font-size: x-large;
+  text-decoration: none;
+  color: #cccccc;
+  cursor: default;
+}
+
+.far .fa-paper-plane .fa-2x :hover {
+  font-size: x-large;
+  text-decoration: none;
+  color: #0050e6 !important;
+  cursor: pointer;
+}
+
+.form-group {
+  padding: 0px 50px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.text-danger {
+  color: red;
+}
+
+.char-counter {
+  font-weight: 200;
+  color: white;
+}

@@ -14,11 +14,10 @@
 
 #skills-header {
   padding-top: 20px;
-  // padding-bottom: 20px;
   color: #346e93;
 }
 
-#skills-subheading h4{
+#skills-subheading h4 {
   color: white;
   text-transform: uppercase;
   padding-bottom: 0px;
@@ -40,16 +39,18 @@
 
 .row.heading h4 {
   font-weight: 200;
-
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .heading.heading-icon {
   display: block;
 }
+
 .padding-lg {
   display: block;
 }
@@ -58,16 +59,19 @@ ul {
   padding-bottom: 55px;
   padding-top: 55px;
 }
+
 .practice-area .inner {
   border: 1px solid #999999;
   text-align: center;
   margin-bottom: 28px;
   padding: 40px 25px;
 }
+
 .section .cnt-block:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border: 0;
 }
+
 .practice-area .inner h3 {
   color: #3c3c3c;
   font-size: 24px;
@@ -75,11 +79,13 @@ ul {
   font-family: "Poppins", sans-serif;
   padding: 10px 0;
 }
+
 .practice-area .inner p {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
 }
+
 .practice-area .inner img {
   display: inline-block;
 }
@@ -94,6 +100,7 @@ ul {
   border: 2px solid #d5d5d5;
   margin: 0 0 80px;
 }
+
 .section .cnt-block figure {
   width: 148px;
   height: 148px;
@@ -101,6 +108,7 @@ ul {
   display: inline-block;
   margin-bottom: 15px;
 }
+
 .section .cnt-block img {
   width: 170px;
   height: 170px;
@@ -108,6 +116,7 @@ ul {
   border-radius: 10%;
   margin-bottom: 20px;
 }
+
 .section .cnt-block h3 {
   color: #2a2a2a;
   font-size: 20px;
@@ -115,31 +124,38 @@ ul {
   padding: 20px 0;
   text-transform: uppercase;
 }
+
 .section .cnt-block h3 a {
   text-decoration: none;
   color: #2a2a2a;
 }
+
 .section .cnt-block h3 a:hover {
   color: #337ab7;
 }
+
 .section .cnt-block p {
   color: #2a2a2a;
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
 }
+
 .section .cnt-block .follow-us {
   margin: 20px 0 0;
 }
+
 .section .cnt-block .follow-us li {
   display: inline-block;
   width: auto;
   margin: 0 5px;
 }
+
 .section .cnt-block .follow-us li .fa {
   font-size: 24px;
   color: #767676;
 }
+
 .section .cnt-block .follow-us li .fa:hover {
   color: #025a8e;
 }
@@ -151,5 +167,4 @@ ul {
 
 #right-box-empty-low {
   height: 50vh;
-
 }

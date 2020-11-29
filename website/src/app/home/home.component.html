@@ -1,7 +1,10 @@
 <section>
   <div class="container-fluid">
     <div class="row is-flex">
-      <div class="col-md-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px dashed white'}">
+      <div
+        class="col-md-12 col-lg-6"
+        id="left-box"
+        [ngStyle]="!isBiggerThan992px ? { 'border-right': 'none' } : { 'border-right': '2px dashed white' }">
         <div style="display: table">
           <div style="display: table-cell; vertical-align: middle">
             <h2 class="heading">Welcome</h2>
@@ -14,14 +17,25 @@
           <div
             class="image-text animate__animated animate__fadeIn animate__delay-1s"
           >
-            <h3 style="font-weight: 200; padding-bottom: 30px">Hi there!</h3>
-            <h5 style="font-weight: 200">
+            <h1 style="padding-bottom: 30px; font-weight: 200;">
+              Hi there, I'm Oliver.
+            </h1>
+            <!-- <h3 style="font-weight: 200">
               My name is Oliver and I like to design and code websites/ software
               solutions.
-            </h5>
+            </h3> -->
+
+
+
+              <h1>
+                <span style="white-space:nowrap; font-weight: 200;"> Front End</span><span style="color: #346e93; white-space:nowrap; font-weight: 500;"> Developer</span>
+              </h1>
+
+                <h1 style="font-weight:200;">and Apprentice at Swisscom.</h1>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+

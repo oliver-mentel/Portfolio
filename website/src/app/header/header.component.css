@@ -5,14 +5,12 @@
 }
 
 .add-blur {
-  transition: 2s -webkit-filter linear;
   backdrop-filter: blur(6px);
 }
 
 .no-blur {
   backdrop-filter: none;
 }
-
 
 .navbar .nav-link {
   color: #16293b;
@@ -27,7 +25,6 @@
 
 ul :hover {
   color: white !important;
-
 }
 
 .navbar .navbar-nav {
@@ -40,8 +37,6 @@ ul :hover {
   min-width: 70px;
   max-width: 100px;
 }
-
-// Removes the outline of all buttons (Bootstrap and Hamburgers.css)
 
 button :focus {
   outline: none !important;

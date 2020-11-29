@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <nav
     class="navbar fixed-top navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown"
-    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)" (scroll)="changeStyle($event)"
+    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)"
   >
     <a
       class="navbar-brand"
@@ -23,12 +23,15 @@
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
+
+
     >
       <button
         class="hamburger hamburger--spring"
         type="button"
         (click)="active = !active"
         [ngClass]="active ? 'is-active' : ''"
+
       >
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
