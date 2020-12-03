@@ -23,15 +23,13 @@
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
-
-
     >
       <button
         class="hamburger hamburger--spring"
         type="button"
         (click)="active = !active"
         [ngClass]="active ? 'is-active' : ''"
-
+        (mouseout)="active = !active"
       >
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -47,6 +45,9 @@
             (click)="scrollingToPosition('aboutMe')"
             routerLink="./AboutMe"
             routerLinkActive="active_route"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+            (click)="changeStyle($event)"
             >About Me</a
           >
         </li>
@@ -54,8 +55,11 @@
           <a
             class="nav-link"
             (click)="scrollingToPosition('skills')"
+            (click)="changeStyle($event)"
             routerLink="./Skills"
             routerLinkActive="active_route"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
             >Skills</a
           >
         </li>
@@ -63,8 +67,11 @@
           <a
             class="nav-link"
             (click)="scrollingToPosition('projects')"
+            (click)="changeStyle($event)"
             routerLink="./Projects"
             routerLinkActive="active_route"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
             >Projects</a
           >
         </li>
@@ -72,8 +79,11 @@
           <a
             class="nav-link"
             (click)="scrollingToPosition('contact')"
+            (click)="changeStyle($event)"
             routerLink="./Contact"
             routerLinkActive="active_route"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
             >Contact</a
           >
         </li>

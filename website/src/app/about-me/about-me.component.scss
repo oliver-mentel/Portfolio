@@ -62,7 +62,9 @@ img.display {
 
 }
 
-.carousel-caption-small {
+.text-small {
   backdrop-filter: blur(2px);
-  border-radius: 8px;
+  backdrop-filter: brightness(53%);
+  border-radius: 10px;
+  padding: 5px 30px;
 }
