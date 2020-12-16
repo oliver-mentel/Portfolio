@@ -1,14 +1,13 @@
 
 #right-box {
-  background-color: #346e93;
-  border-top: 2px dashed white;
+  border-top: 2px solid white;
   padding: 0;
   height: 100vh;
   justify-content: center;
 }
 
 #left-box {
-  border-right: 2px dashed white;
+  border-right: 2px solid white;
   padding: 0;
   height: 100vh;
 }
@@ -24,13 +23,13 @@
 }
 
 #left-box-empty {
-  border-top: 2px dashed white;
-  border-right: 2px dashed white;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
   height: 50vh;
 }
 
 #right-box-empty {
-  border-top: 2px dashed white;
+  border-top: 2px solid white;
   height: 50vh;
 
 }
@@ -49,7 +48,7 @@ img.display {
 }
 
 .container {
-  border: 2px dashed white;
+  border: 2px solid white;
 }
 
 .heading {
