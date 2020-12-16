@@ -82,6 +82,7 @@ h5 {
   padding: 0px 20px;
   margin-bottom: 50px;
   margin-top: 5%;
+
 }
 
 iframe {
@@ -89,5 +90,8 @@ iframe {
   flex: 1 1 100%;
   align-items: baseline;
   max-height: 500px;
+  -webkit-box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
+box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
 }
 

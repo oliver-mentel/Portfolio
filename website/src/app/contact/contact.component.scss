@@ -83,13 +83,13 @@ button {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px dashed white;
+  border: 2px solid white !important;
   background-color: #1b3b4e !important;
   cursor: default;
 }
 
 .btn .btn-primary :hover {
-  color: #ffffff !important;
+  color: #0047e0 !important;
   cursor: pointer;
 }
 

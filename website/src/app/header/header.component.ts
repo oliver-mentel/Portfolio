@@ -1,4 +1,10 @@
-import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +15,7 @@ export class HeaderComponent implements OnInit {
   @Output() click: EventEmitter<any> = new EventEmitter();
   active = false;
   blur: string = '';
-  // collapse: string = '';
-  // private _el: any;
+  collapse: string = '';
 
   constructor() {}
 
@@ -22,7 +27,11 @@ export class HeaderComponent implements OnInit {
 
   changeStyle($event) {
     this.blur = $event.type == 'mouseover' ? 'add-blur' : '';
-    // this.blur = $event.type == 'mouseout' ? 'no-blur' : '';
   }
+
+  toggleCollapse($event) {
+    this.collapse = $event.type == 'mouseout' ? 'collapse-show' : '';
+  }
+
 
 }

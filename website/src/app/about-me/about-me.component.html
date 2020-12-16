@@ -5,14 +5,14 @@
     <section>
       <div class="container-fluid">
         <div class="row is-flex">
-          <div class="col-12 col-lg-6" id="right-box" [ngStyle]="!isBiggerThan992px ? {'border-bottom': '2px dashed white'} : {'border-right': 'none'}">
+          <div class="col-12 col-lg-6" id="right-box" [ngStyle]="!isBiggerThan992px ? {'border-bottom': '2px solid white'} : {'border-right': 'none'}">
             <div style="display: table">
               <div style="display: table-cell; vertical-align: middle">
                 <h2 class="heading">About Me</h2>
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px dashed white'}">
+          <div class="col-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px solid white'}">
             <carousel [isAnimated]="true">
               <slide>
                 <img
