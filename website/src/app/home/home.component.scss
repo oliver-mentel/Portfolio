@@ -8,9 +8,9 @@
 }
 
 #right-box {
-
-  padding: 0;
+  padding: 0px;
   height: 100vh;
+  border-bottom: 2px solid white;
 }
 
 .row.is-flex {
@@ -42,7 +42,7 @@
 
 img {
   width: 100%; // dimensions are mandatory
-	height: 100vh; // dimensions are mandatory
+	height: 99.8vh; // dimensions are mandatory
 	object-fit: cover;
 	overflow: hidden; // Cuts off the parts of the image poking out
 }

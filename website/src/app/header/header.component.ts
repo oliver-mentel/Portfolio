@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   active = false;
   blur: string = '';
   collapse: string = '';
+  closeNav = false;
 
   constructor() {}
 
@@ -29,9 +30,18 @@ export class HeaderComponent implements OnInit {
     this.blur = $event.type == 'mouseover' ? 'add-blur' : '';
   }
 
-  toggleCollapse($event) {
-    this.collapse = $event.type == 'mouseout' ? 'collapse-show' : '';
+  closeBurger($event) {
+    var element = document.getElementById('hamburger');
+    element.classList.remove('is-active');
+    this.active = false;
   }
 
+  closeOnLeave($event) {
+    var element = document.getElementById('navbarNav');
+    element.classList.remove('show');
+    var element = document.getElementById('hamburger');
+    element.classList.remove('is-active');
+    this.active = false;
+  }
 
 }
