@@ -181,7 +181,9 @@ li {
 .tp-box {
   margin: 0 auto;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 1s;
+  -webkit-transition: 0.6s;
   width: 100%;
   height: 100%;
 }
@@ -199,9 +201,17 @@ li {
 
 .tp-box__front {
   position: absolute;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  top: 0;
+  left: 0;
 }
+
 .tp-box__back {
-  transform: rotateY(179.9deg);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 h5 {
