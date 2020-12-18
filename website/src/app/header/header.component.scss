@@ -26,13 +26,21 @@
   cursor: pointer;
 }
 
+.nav-item {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .navbar .navbar-toggler {
   border-style: none !important;
 }
 
 li :hover {
   color: rgb(182, 182, 182) !important;
+}
 
+a {
+  text-align: center;
 }
 
 .navbar .navbar-nav {
@@ -44,6 +52,7 @@ li :hover {
   color: white !important;
   min-width: 70px;
   max-width: 100px;
+  text-align: center;
 }
 
 // Removes the outline of all buttons (Bootstrap and Hamburgers.css)

@@ -5,6 +5,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { timeout } from 'rxjs/operators';
 import { ContactService } from '../contact.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class ContactComponent implements OnInit {
   isBiggerThan992px = true;
   submitted = false;
   isZoomed = false;
+  showMessage = false;
 
   @Input()
   numberOfCharacters1 = 0;
@@ -59,6 +61,7 @@ export class ContactComponent implements OnInit {
     return this.FormData.controls;
   }
 
+  // Email Service Call to contact.service.ts
   onSubmit(FormData) {
     this.submitted = true;
     console.log(FormData);
@@ -74,6 +77,7 @@ export class ContactComponent implements OnInit {
     );
   }
 
+  // Character Counter
   onKeyUp(event: any): void {
     this.numberOfCharacters1 = event.target.value.length;
 
@@ -86,12 +90,14 @@ export class ContactComponent implements OnInit {
     }
   }
 
+  // Enlarges Message box on Focus for better usability
   zoomInOnFocus() {
     this.isZoomed = !this.isZoomed;
     console.log('You hit the text area.');
     document.getElementById('text-area').style.height = '200px';
   }
 
+  // Enlarges Message box on click for better usability
   zoomInOnClick() {
     this.isZoomed = !this.isZoomed;
     console.log(this.isZoomed);
@@ -101,5 +107,14 @@ export class ContactComponent implements OnInit {
     } else {
       document.getElementById('text-area').style.height = null;
     }
+  }
+
+  // Displays Success Msg on submit.
+  onSend($event) {
+    this.showMessage = true;
+
+    setTimeout(() => {
+      this.showMessage = false;
+    }, 3000);
   }
 }

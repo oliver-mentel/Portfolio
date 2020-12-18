@@ -17,10 +17,6 @@
           <!-- Right Box -->
           <div class="col-md-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px solid white'}">
             <h2 class="contact-title">Let's Build Something Together</h2>
-            <!-- <h5 class="contact-description" id="contact-text">
-              Please leave your contact details bellow and I will try my very
-              best to contact you as soon as possible.
-            </h5> -->
             <h5 class="contact-description">
               Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
             </h5>
@@ -152,10 +148,6 @@
         <div class="row is-flex">
           <div class="col-md-12 col-lg-6" id="left-box">
             <h2 class="contact-title">Let's Build Something Together</h2>
-            <!-- <h5 class="contact-description">
-              Please leave you contact details bellow and I will try my very
-              best to contact you as soon as possible.
-            </h5> -->
             <h5 class="contact-description">
               Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
             </h5>
@@ -254,12 +246,15 @@
                       class="btn btn-primary"
                       [disabled]="!FormData.valid"
                       [ngClass]="FormData.valid ? ' :hover' : ''"
+                      (click)="onSend($event)"
                     >
                       <i
                         class="far fa-paper-plane fa-2x"
                         [ngClass]="FormData.valid ? ' :hover' : ''"
                       ></i>
                     </button>
+                    <div *ngIf="showMessage === true" class="sent-msg">Message sent successfully!</div>
+
                   </form>
                 </div>
               </div>
