@@ -91,11 +91,11 @@ export class ContactComponent implements OnInit {
   }
 
   // Enlarges Message box on Focus for better usability
-  zoomInOnFocus() {
-    this.isZoomed = !this.isZoomed;
-    console.log('You hit the text area.');
-    document.getElementById('text-area').style.height = '200px';
-  }
+  // zoomInOnFocus() {
+  //   this.isZoomed = !this.isZoomed;
+  //   console.log('You hit the text area.');
+  //   document.getElementById('text-area').style.height = '200px';
+  // }
 
   // Enlarges Message box on click for better usability
   zoomInOnClick() {
@@ -103,7 +103,6 @@ export class ContactComponent implements OnInit {
     console.log(this.isZoomed);
     if (this.isZoomed) {
       document.getElementById('text-area').style.height = '200px';
-      document.getElementById('contact-text').style.font = '20px';
     } else {
       document.getElementById('text-area').style.height = null;
     }
