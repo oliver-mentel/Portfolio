@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     if (window.innerWidth >= 992) {
       this.isBiggerThan992px = true;
-      console.log(this.isBiggerThan992px);
     } else {
       this.isBiggerThan992px = false;
     }
@@ -23,7 +22,6 @@ export class HomeComponent implements OnInit {
   onResize(event) {
     if (event.target.innerWidth >= 992) {
       this.isBiggerThan992px = true;
-      console.log(this.isBiggerThan992px);
     } else {
       this.isBiggerThan992px = false;
     }

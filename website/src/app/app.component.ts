@@ -7,7 +7,6 @@ import {
   ElementRef,
 } from '@angular/core';
 
-
 const areas = 'home, aboutMe, projects, contact';
 @Component({
   selector: 'app-root',
@@ -33,8 +32,6 @@ export class AppComponent implements OnInit {
     const activeSection = this.sections
       .toArray()
       .findIndex((section) => isElementInViewport(section.nativeElement));
-
-    console.log(areas.split(',')[activeSection]);
   }
 }
 

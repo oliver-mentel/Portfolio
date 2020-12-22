@@ -3,7 +3,6 @@
   padding-left: 0px !important;
 }
 
-
 #right-box {
   height: 100vh;
   border-bottom: 2px solid white;
@@ -18,7 +17,6 @@
   border-bottom: 2px solid white;
   border-top: 2px solid white;
 }
-
 
 #left-box-empty {
   border-right: 2px solid white;
@@ -129,4 +127,16 @@ button {
   margin: 0 auto;
   margin-bottom: 40px;
   font-weight: 300;
+}
+
+#text-area {
+  height: 100px;
+}
+
+#text-area:focus {
+  height: 200px;
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
 }

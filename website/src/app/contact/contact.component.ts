@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
   submitted = false;
   isZoomed = false;
   showMessage = false;
+  active = false;
 
   @Input()
   numberOfCharacters1 = 0;
@@ -31,11 +32,9 @@ export class ContactComponent implements OnInit {
   onResize(event) {
     if (event.target.innerWidth >= 992) {
       this.isBiggerThan992px = true;
-      console.log(this.isBiggerThan992px);
     } else {
       this.isBiggerThan992px = false;
     }
-    console.log(window.innerWidth);
   }
 
   ngOnInit() {
@@ -51,7 +50,6 @@ export class ContactComponent implements OnInit {
 
     if (window.innerWidth >= 992) {
       this.isBiggerThan992px = true;
-      console.log(this.isBiggerThan992px);
     } else {
       this.isBiggerThan992px = false;
     }
@@ -98,15 +96,15 @@ export class ContactComponent implements OnInit {
   // }
 
   // Enlarges Message box on click for better usability
-  zoomInOnClick() {
-    this.isZoomed = !this.isZoomed;
-    console.log(this.isZoomed);
-    if (this.isZoomed) {
-      document.getElementById('text-area').style.height = '200px';
-    } else {
-      document.getElementById('text-area').style.height = null;
-    }
-  }
+  // zoomInOnClick() {
+  //   this.isZoomed = !this.isZoomed;
+  //   console.log(this.isZoomed);
+  //   if (this.isZoomed) {
+  //     document.getElementById('text-area').style.height = '200px';
+  //   } else {
+  //     document.getElementById('text-area').style.height = null;
+  //   }
+  // }
 
   // Displays Success Msg on submit.
   onSend($event) {
