@@ -4,7 +4,13 @@
       <div
         class="col-md-12 col-lg-6"
         id="left-box"
-        [ngStyle]="!isBiggerThan992px ? { 'border-right': 'none' } : { 'border-right': '2px solid white' }">
+        *ngIf="isBiggerThan992px"
+        [ngStyle]="
+          !isBiggerThan992px
+            ? { 'border-right': 'none' }
+            : { 'border-right': '2px solid white' }
+        "
+      >
         <div style="display: table">
           <div style="display: table-cell; vertical-align: middle">
             <h2 class="heading">Welcome</h2>
@@ -15,26 +21,26 @@
         <div class="image-container">
           <img src="assets/Oliver_Mentel_Portrait.jpg" />
 
-          <div id="text-continaer"
+          <div
+            id="text-continaer"
             class="image-text animate__animated animate__fadeIn animate__delay-1s"
           >
-            <h2 style="font-weight: 200;">
-              Hi there, I'm Oliver.
+            <h2 style="font-weight: 200">Hi there, I'm Oliver.</h2>
+
+            <h2>
+              <span style="white-space: nowrap; font-weight: 200">
+                Front End</span
+              ><span
+                style="color: #2d7eb1; white-space: nowrap; font-weight: 500"
+              >
+                Developer</span
+              >
             </h2>
 
-
-
-
-              <h2>
-                <span style="white-space:nowrap; font-weight: 200;"> Front End</span><span style="color: #2d7eb1; white-space:nowrap; font-weight: 500;"> Developer</span>
-              </h2>
-
-                <h2 style="font-weight:200;">and Apprentice at Swisscom.</h2>
-
-        </div>
+            <h2 style="font-weight: 200">and Apprentice at Swisscom.</h2>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-

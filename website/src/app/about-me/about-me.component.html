@@ -5,7 +5,7 @@
     <section>
       <div class="container-fluid">
         <div class="row is-flex">
-          <div class="col-12 col-lg-6" id="right-box" [ngStyle]="!isBiggerThan992px ? {'border-bottom': '2px solid white'} : {'border-right': 'none'}">
+          <div class="col-12 col-lg-6" id="right-box" *ngIf="isBiggerThan992px" [ngStyle]="!isBiggerThan992px ? {'border-bottom': '2px solid white'} : {'border-right': 'none'}">
             <div style="display: table">
               <div style="display: table-cell; vertical-align: middle">
                 <h2 class="heading">About Me</h2>
@@ -67,7 +67,7 @@
                   <p>
                     After completing my A-Levels in Basel I spent two semesters
                     studying Aerospace Engineering in Sheffield and later three
-                    Semester studying Geography at Zurich. Although I hadn't
+                    semesters studying Geography at Zurich. Although I hadn't
                     completed both study courses I further deepened my interest
                     in programming, as some modules were related to it.
                   </p>
@@ -156,7 +156,7 @@
                   <p>
                     After completing my A-Levels in Basel I spent two semesters
                     studying Aerospace Engineering in Sheffield and later three
-                    Semester studying Geography at Zurich. Although I hadn't
+                    semesters studying Geography at Zurich. Although I hadn't
                     completed both study courses I further deepened my interest
                     in programming, as some modules were related to it.
                   </p>

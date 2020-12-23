@@ -7,12 +7,14 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   isBiggerThan992px = true;
+  show: boolean = true;
 
   constructor() {}
 
   ngOnInit(): void {
     if (window.innerWidth >= 992) {
       this.isBiggerThan992px = true;
+      this.show = false;
     } else {
       this.isBiggerThan992px = false;
     }
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
   onResize(event) {
     if (event.target.innerWidth >= 992) {
       this.isBiggerThan992px = true;
+      this.show = false;
     } else {
       this.isBiggerThan992px = false;
     }

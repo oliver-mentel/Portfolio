@@ -1,7 +1,16 @@
 <section>
   <div class="container-fluid">
     <div class="row is-flex">
-      <div class="col-md-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px solid white'}">
+      <div
+        class="col-md-12 col-lg-6"
+        id="left-box"
+        *ngIf="isBiggerThan992px"
+        [ngStyle]="
+          !isBiggerThan992px
+            ? { 'border-right': 'none' }
+            : { 'border-right': '2px solid white' }
+        "
+      >
         <div style="display: table">
           <div style="display: table-cell; vertical-align: middle">
             <h2 class="heading">Projects</h2>
@@ -12,7 +21,7 @@
       <div class="col-md-12 col-lg-6" id="right-box">
         <carousel [isAnimated]="true" [noWrap]="true">
           <!-- Slide 1-->
-          <slide >
+          <slide>
             <div>
               <div class="project-slide">
                 <h3 class="slide-header">CoPE Services, Swisscom</h3>
@@ -56,12 +65,12 @@
                 </div>
                 <p class="slide-content">
                   Spending the last few months with mainly front-end tasks I
-                  intentionally changed my field of focus to learn
-                  more about automation. During this time I learned to use
-                  the automation software "Automation Anywhere" together with
-                  the usage of VBA (Visual Basic for Applications). My main
-                  tasks were the analysis of use-cases, creation of concept for
-                  the automation development as well as the deployment.
+                  intentionally changed my field of focus to learn more about
+                  automation. During this time I learned to use the automation
+                  software "Automation Anywhere" together with the usage of VBA
+                  (Visual Basic for Applications). My main tasks were the
+                  analysis of use-cases, creation of concept for the automation
+                  development as well as the deployment.
                 </p>
                 <div class="map">
                   <iframe

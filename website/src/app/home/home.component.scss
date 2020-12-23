@@ -1,4 +1,3 @@
-
 #left-box {
   border-right: 2px solid white;
   border-bottom: 2px solid white;
@@ -19,7 +18,7 @@
   flex-grow: 0;
 }
 
-.row.is-flex > [class*='col-'] {
+.row.is-flex > [class*="col-"] {
   display: flex;
   flex-direction: column;
   padding-right: 0;
@@ -39,14 +38,12 @@
   transform: translate(-50%, -50%);
 }
 
-
 img {
   width: 100%; // dimensions are mandatory
-	height: 99.8vh; // dimensions are mandatory
-	object-fit: cover;
-	overflow: hidden; // Cuts off the parts of the image poking out
+  height: 99.8vh; // dimensions are mandatory
+  object-fit: cover;
+  overflow: hidden; // Cuts off the parts of the image poking out
 }
-
 
 .heading {
   color: rgb(255, 255, 255);
