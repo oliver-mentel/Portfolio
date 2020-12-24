@@ -1,4 +1,6 @@
-<header>
+<header
+  *ngIf="isScrollDown === false"
+>
   <app-header (click)="scrollTo($event)" class="header"></app-header>
 </header>
 <body>

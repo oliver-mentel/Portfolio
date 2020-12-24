@@ -15,6 +15,10 @@ const areas = 'home, aboutMe, projects, contact';
 })
 export class AppComponent implements OnInit {
   title = 'website';
+  isScrollDown = false;
+  oldScroll: number;
+  scrollY: number;
+  oldValue = 0;
 
   ngOnInit() {}
 
@@ -26,12 +30,29 @@ export class AppComponent implements OnInit {
   // Listener, tells which section the viewport is in.
   @ViewChildren(areas) sections: QueryList<ElementRef>;
 
-  // dentify which full height div block is currently displayed
+  // identifies which full height div block is currently displayed
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
     const activeSection = this.sections
       .toArray()
       .findIndex((section) => isElementInViewport(section.nativeElement));
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event) {
+    let newValue = window.pageYOffset;
+
+    //Subtract the two and conclude
+    if (this.oldValue - newValue > 0) {
+      console.log('Up');
+      this.isScrollDown = false;
+    } else if (this.oldValue - newValue < 0) {
+      this.isScrollDown = true;
+      console.log('Down');
+    }
+
+    // Update the old value
+    this.oldValue = newValue;
   }
 }
 

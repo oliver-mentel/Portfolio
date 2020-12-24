@@ -33,9 +33,10 @@
 
 .image-text {
   position: absolute;
-  top: 80%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%);
+  // margin: 20px auto;
 }
 
 img {
