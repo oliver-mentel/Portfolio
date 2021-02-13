@@ -88,24 +88,6 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  // Enlarges Message box on Focus for better usability
-  // zoomInOnFocus() {
-  //   this.isZoomed = !this.isZoomed;
-  //   console.log('You hit the text area.');
-  //   document.getElementById('text-area').style.height = '200px';
-  // }
-
-  // Enlarges Message box on click for better usability
-  // zoomInOnClick() {
-  //   this.isZoomed = !this.isZoomed;
-  //   console.log(this.isZoomed);
-  //   if (this.isZoomed) {
-  //     document.getElementById('text-area').style.height = '200px';
-  //   } else {
-  //     document.getElementById('text-area').style.height = null;
-  //   }
-  // }
-
   // Displays Success Msg on submit.
   onSend($event) {
     this.showMessage = true;

@@ -44,11 +44,9 @@ export class AppComponent implements OnInit {
 
     //Subtract the two and conclude
     if (this.oldValue - newValue > 0) {
-      console.log('Up');
       this.isScrollDown = false;
     } else if (this.oldValue - newValue < 0) {
       this.isScrollDown = true;
-      console.log('Down');
     }
 
     // Update the old value
