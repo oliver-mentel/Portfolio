@@ -56,5 +56,10 @@ img {
 }
 
 #text-container {
+  width: 75%;
   padding: 20px;
+  transition: 2s -webkit-filter linear;
+  backdrop-filter: blur(6px);
+  border-radius: 8px 8px 8px 8px;
+  border: solid 2px rgb(255, 255, 255);
 }
