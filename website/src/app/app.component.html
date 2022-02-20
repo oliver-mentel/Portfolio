@@ -1,22 +1,22 @@
 <header
   *ngIf="isScrollDown === false"
 >
-  <app-header (click)="scrollTo($event)" class="header"></app-header>
+  <app-header (clickElement)="scrollTo($event)" class="header"></app-header>
 </header>
 <body>
-  <div id="home" (scroll)="onScroll($event)" #home>
+  <div id="home" (scroll)="onScroll()" #home>
     <app-home></app-home>
   </div>
-  <div id="aboutMe" (scroll)="onScroll($event)" #aboutMe>
+  <div id="aboutMe" (scroll)="onScroll()" #aboutMe>
     <app-about-me></app-about-me>
   </div>
-  <div id="skills" (scroll)="onScroll($event)" #skills>
-    <app-skills></app-skills>
+  <div id="skills" (scroll)="onScroll()" #skills>
+    <app-skills>></app-skills>
   </div>
-  <div id="projects" (scroll)="onScroll($event)" #projects>
+  <div id="projects" (scroll)="onScroll()" #projects>
     <app-projects></app-projects>
   </div>
-  <div id="contact" (scroll)="onScroll($event)" #contact>
+  <div id="contact" (scroll)="onScroll()" #contact>
     <app-contact></app-contact>
   </div>
   <footer><app-footer></app-footer></footer>

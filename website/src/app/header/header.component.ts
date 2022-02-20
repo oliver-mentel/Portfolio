@@ -1,10 +1,5 @@
-import {
-  Component,
-  OnInit,
-  Output,
-  EventEmitter,
-  HostListener,
-} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,36 +7,39 @@ import {
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() click: EventEmitter<any> = new EventEmitter();
-  active = false;
+  @Output() clickElement: EventEmitter<any> = new EventEmitter();
+  active: boolean = false;
   blur: string = '';
   collapse: string = '';
-  closeNav = false;
+  closeNav: boolean = false;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // use index 26 for Prod, 22 for local development
+    this.scrollingToPosition(window.location.href.slice(26));
+    // console.log(window.location.href.slice(26));
+  }
 
-  scrollingToPosition(idNameOfSection) {
-    this.click.emit(idNameOfSection);
+  scrollingToPosition(idNameOfSection: string) {
+    this.clickElement.emit(idNameOfSection);
   }
 
   changeStyle($event) {
     this.blur = $event.type == 'mouseover' ? 'add-blur' : '';
   }
 
-  closeBurger($event) {
-    var element = document.getElementById('hamburger');
+  closeBurger() {
+    let element = document.getElementById('hamburger');
     element.classList.remove('is-active');
     this.active = false;
   }
 
-  closeOnLeave($event) {
-    var element = document.getElementById('navbarNav');
-    element.classList.remove('show');
-    var element = document.getElementById('hamburger');
-    element.classList.remove('is-active');
+  closeOnLeave() {
+    let navBarNavElement = document.getElementById('navbarNav');
+    navBarNavElement.classList.remove('show');
+    let hamburgerElement = document.getElementById('hamburger');
+    hamburgerElement.classList.remove('is-active');
     this.active = false;
   }
-
 }

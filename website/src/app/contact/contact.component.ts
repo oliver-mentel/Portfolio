@@ -5,7 +5,6 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import { timeout } from 'rxjs/operators';
 import { ContactService } from '../contact.service';
 
 @Component({
@@ -16,14 +15,12 @@ import { ContactService } from '../contact.service';
 export class ContactComponent implements OnInit {
   FormData: FormGroup;
   isBiggerThan992px = true;
-  submitted = false;
-  isZoomed = false;
-  showMessage = false;
-  active = false;
+  isSubmitted: boolean = false;
+  hasError: boolean = false;
 
   @Input()
   numberOfCharacters1 = 0;
-  maxNumberOfCharacters = 1000;
+  maxNumberOfCharacters = 500;
   counter = true;
 
   constructor(private builder: FormBuilder, private contact: ContactService) {}
@@ -39,12 +36,12 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.FormData = this.builder.group({
-      fullName: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required]),
       email: new FormControl('', [
         Validators.compose([Validators.required, Validators.email]),
       ]),
-      comment: new FormControl('', [
-        Validators.compose([Validators.required, Validators.maxLength(1000)]),
+      message: new FormControl('', [
+        Validators.compose([Validators.required, Validators.maxLength(500)]),
       ]),
     });
 
@@ -61,16 +58,22 @@ export class ContactComponent implements OnInit {
 
   // Email Service Call to contact.service.ts
   onSubmit(FormData) {
-    this.submitted = true;
-    console.log(FormData);
+    // console.log(FormData);
     this.contact.PostMessage(FormData).subscribe(
       (response) => {
-        location.href = 'https://mailthis.to/confirm';
         console.log(response);
+
+        this.isSubmitted = true;
+        this.hasError = false;
+        this.FormData.reset()
+        setTimeout(() => {
+          this.isSubmitted = false;
+        }, 3000);
       },
       (error) => {
         console.warn(error.responseText);
         console.log({ error });
+        this.hasError = true;
       }
     );
   }
@@ -86,14 +89,5 @@ export class ContactComponent implements OnInit {
       );
       this.numberOfCharacters1 = this.maxNumberOfCharacters;
     }
-  }
-
-  // Displays Success Msg on submit.
-  onSend($event) {
-    this.showMessage = true;
-
-    setTimeout(() => {
-      this.showMessage = false;
-    }, 3000);
   }
 }

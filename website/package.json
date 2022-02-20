@@ -45,7 +45,7 @@
     "@typescript-eslint/parser": "5.11.0",
     "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^6.0.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.9.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",

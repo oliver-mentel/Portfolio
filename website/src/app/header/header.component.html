@@ -1,15 +1,15 @@
 <div class="container-fluid">
   <nav
     class="navbar fixed-top navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown"
-    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)" [ngClass]="closeNav" (mouseleave)="closeOnLeave($event)"
+    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)" [ngClass]="closeNav" (mouseleave)="closeOnLeave()"
   >
     <a
       class="navbar-brand"
       (click)="scrollingToPosition('home')"
-      (click)="closeBurger($event)"
+      (click)="closeBurger()"
       data-toggle="collapse"
       data-target=".navbar-collapse.show"
-      routerLink="./home"
+      [routerLink]="['home']"
       routerLinkActive="active_router"
       style="cursor: pointer"
       ><img
@@ -22,7 +22,7 @@
       class="navbar-toggler"
       type="button"
       data-toggle="collapse"
-      data-target="#navbarNav"
+      data-target="navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
@@ -45,12 +45,12 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            routerLink="./aboutMe"
+            [routerLink]="['aboutMe']"
             routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             (click)="changeStyle($event)"
-            (click)="closeBurger($event)"
+            (click)="closeBurger()"
             (click)="scrollingToPosition('aboutMe')"
             >About Me</a
           >
@@ -60,8 +60,8 @@
             class="nav-link"
             (click)="scrollingToPosition('skills')"
             (click)="changeStyle($event)"
-            (click)="closeBurger($event)"
-            routerLink="./skills"
+            (click)="closeBurger()"
+            [routerLink]="['skills']"
             routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
@@ -73,8 +73,9 @@
             class="nav-link"
             (click)="scrollingToPosition('projects')"
             (click)="changeStyle($event)"
-            (click)="closeBurger($event)"
-            routerLink="./projects"
+            (click)="closeBurger()"
+            [routerLink]="['projects']"
+            fragment="projects"
             routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
@@ -86,8 +87,8 @@
             class="nav-link"
             (click)="scrollingToPosition('contact')"
             (click)="changeStyle($event)"
-            (click)="closeBurger($event)"
-            routerLink="./contact"
+            (click)="closeBurger()"
+            [routerLink]="['contact']"
             routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"

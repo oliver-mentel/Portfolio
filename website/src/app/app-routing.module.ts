@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 
+// TODO: ADD lazy loading
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'aboutMe', component: AboutMeComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '',   redirectTo: 'home', pathMatch: 'full' }, // redirect to home component
 ];
 
 @NgModule({

@@ -1,11 +1,12 @@
 import {
   Component,
   HostListener,
-  OnInit,
   ViewChildren,
   QueryList,
   ElementRef,
+  OnInit,
 } from '@angular/core';
+import packageJson from '../../package.json';
 
 const areas = 'home, aboutMe, projects, contact';
 @Component({
@@ -14,17 +15,19 @@ const areas = 'home, aboutMe, projects, contact';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'website';
-  isScrollDown = false;
+  private angularVersion: string = packageJson.dependencies['@angular/core'];
+  isScrollDown: boolean = false;
   oldScroll: number;
   scrollY: number;
-  oldValue = 0;
+  oldValue: number = 0;
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    console.log("This Website is currently using Angular Version: ", this.angularVersion)
+  }
 
   // Scrolls to section as clicked from header component.
-  scrollTo(event) {
-    document.getElementById(event).scrollIntoView({ behavior: 'smooth' });
+  scrollTo(event: string) {
+    document.getElementById(event)?.scrollIntoView({ behavior: 'smooth' });
   }
 
   // Listener, tells which section the viewport is in.
@@ -32,15 +35,18 @@ export class AppComponent implements OnInit {
 
   // identifies which full height div block is currently displayed
   @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
-    const activeSection = this.sections
+  onScroll() {
+    this.sections
       .toArray()
-      .findIndex((section) => isElementInViewport(section.nativeElement));
+      .findIndex((section) => this.checkElementInViewport(section.nativeElement));
+    console.log(this.sections
+      .toArray()
+      .findIndex((section) => this.checkElementInViewport(section.nativeElement)))
   }
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event) {
-    let newValue = window.pageYOffset;
+  onWindowScroll() {
+    let newValue: number = window.pageYOffset;
 
     //Subtract the two and conclude
     if (this.oldValue - newValue > 0) {
@@ -52,17 +58,22 @@ export class AppComponent implements OnInit {
     // Update the old value
     this.oldValue = newValue;
   }
-}
 
-// Creates a rectangle on the viewport to distinguish which section is active.
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
+  checkElementInViewport(element): void {
+    // Creates a rectangle on the viewport to distinguish which section is active.
+    const isElementInViewport = (el) => {
+      el = element
+      let rect = el.getBoundingClientRect();
+      console.log("Works")
 
-  // check if specific section is inside viewport by using helper
-  return (
-    rect.bottom >= 1 &&
-    rect.right >= 0 &&
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+      // check if specific section is inside viewport by using helper
+      return (
+        rect.bottom >= 1 &&
+        rect.right >= 0 &&
+        rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  }
 }

@@ -3,16 +3,21 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
   year: number;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    var d = new Date();
-    var n = d.getFullYear();
-    this.year = n;
+    this.displayCurrentYear();
+  }
+
+  displayCurrentYear() {
+    let date: Date = new Date();
+    let now: number = date.getFullYear();
+
+    this.year = now;
   }
 }

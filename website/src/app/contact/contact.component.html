@@ -6,7 +6,16 @@
       <!-- Left Box-->
       <div class="container-fluid">
         <div class="row is-flex">
-          <div class="col-md-12 col-lg-6" id="right-box"  *ngIf="isBiggerThan992px" [ngStyle]="!isBiggerThan992px ? {'border-bottom': 'none'}: {'border-bottom': '2px solid white'}">
+          <div
+            class="col-md-12 col-lg-6"
+            id="right-box"
+            *ngIf="isBiggerThan992px"
+            [ngStyle]="
+              !isBiggerThan992px
+                ? { 'border-bottom': 'none' }
+                : { 'border-bottom': '2px solid white' }
+            "
+          >
             <div style="display: table">
               <div style="display: table-cell; vertical-align: middle">
                 <h2 class="heading">Contact</h2>
@@ -15,18 +24,51 @@
           </div>
 
           <!-- Right Box -->
-          <div class="col-md-12 col-lg-6" id="left-box" [ngStyle]="!isBiggerThan992px ? {'border-right': 'none'} : {'border-right': '2px solid white'}">
+          <div
+            class="col-md-12 col-lg-6"
+            id="left-box"
+            [ngStyle]="
+              !isBiggerThan992px
+                ? { 'border-right': 'none' }
+                : { 'border-right': '2px solid white' }
+            "
+          >
             <h2 class="contact-title">Let's Build Something Together</h2>
             <h5 class="contact-description">
-              Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+              Feel free to reach out if you're looking for a developer, have a
+              question, or just want to connect.
             </h5>
             <div class="container-fluid">
               <div class="row is-flex">
                 <div class="col-sm-12">
+                  <!-- Form -->
                   <form
                     [formGroup]="FormData"
                     (ngSubmit)="onSubmit(FormData.value)"
                   >
+                  <!-- Name -->
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        formControlName="name"
+                        required
+                      />
+                      <span
+                        class="text-danger"
+                        *ngIf="
+                          (registerFormControl.name.touched || submitted) &&
+                          registerFormControl.name.errors?.required
+                        "
+                      >
+                        Name is required
+                      </span>
+                    </div>
+
+                    <!-- Email -->
                     <div class="form-group">
                       <label for="Email">Email</label>
                       <input
@@ -57,63 +99,46 @@
                         Enter a valid email address
                       </span>
                     </div>
-                    <div class="form-group">
-                      <label for="fullname">Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="fullName"
-                        placeholder="Full Name"
-                        formControlName="fullName"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
-                          (registerFormControl.fullName.touched || submitted) &&
-                          registerFormControl.fullName.errors?.required
-                        "
-                      >
-                        Full Name is required
-                      </span>
-                    </div>
 
+                    <!-- Message -->
                     <div class="form-group">
-                      <label for="comment">Comment</label>
+                      <label for="message">Message</label>
                       <textarea
                         class="form-control"
-                        formControlName="comment"
-                        name="comment"
+                        formControlName="message"
+                        name="message"
                         id="text-area"
                         placeholder="Please Leave a message"
+                        maxlength="500"
                         (keyup)="onKeyUp($event)"
                         required
                       >
                       </textarea>
                       <div>
-                      <div class="char-counter" style="float: left;">
-                        {{ numberOfCharacters1 }} /
-                        {{ maxNumberOfCharacters }}
-                      </div>
+                        <div class="char-counter" style="float: left">
+                          {{ numberOfCharacters1 }} /
+                          {{ maxNumberOfCharacters }}
+                        </div>
 
-                      <span
-                        class="text-danger"
-                        style="float: right;"
-                        *ngIf="
-                          (registerFormControl.comment.touched || submitted) &&
-                          registerFormControl.comment.errors?.required
-                        "
-                      >
-                        Message is required
-                      </span>
-                      <span
-                        class="text-danger"
-                        style="float: right;"
-                        *ngIf="registerFormControl.comment.errors?.maxlength"
-                      >
-                        Message is too long
-                      </span>
-                    </div>
+                        <span
+                          class="text-danger"
+                          style="float: right"
+                          *ngIf="
+                            (registerFormControl.message.touched ||
+                              submitted) &&
+                            registerFormControl.message.errors?.required
+                          "
+                        >
+                          Message is required
+                        </span>
+                        <span
+                          class="text-danger"
+                          style="float: right"
+                          *ngIf="registerFormControl.message.errors?.maxlength"
+                        >
+                          Message is too long
+                        </span>
+                      </div>
                     </div>
 
                     <button
@@ -127,7 +152,10 @@
                         [ngClass]="FormData.valid ? ' :hover' : ''"
                       ></i>
                     </button>
-
+                    <div *ngIf="isSubmitted" class="sent-msg">
+                      Message sent successfully!
+                    </div>
+                    <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.</div>
                   </form>
                 </div>
               </div>
@@ -147,15 +175,41 @@
           <div class="col-md-12 col-lg-6" id="left-box">
             <h2 class="contact-title">Let's Build Something Together</h2>
             <h5 class="contact-description">
-              Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+              Feel free to reach out if you're looking for a developer, have a
+              question, or just want to connect.
             </h5>
             <div class="container-fluid">
               <div class="row is-flex">
                 <div class="col-12">
+
+                  <!-- Form -->
                   <form
                     [formGroup]="FormData"
                     (ngSubmit)="onSubmit(FormData.value)"
                   >
+                    <!-- Name -->
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        formControlName="name"
+                        required
+                      />
+                      <span
+                        class="text-danger"
+                        *ngIf="
+                          (registerFormControl.name.touched || submitted) &&
+                          registerFormControl.name.errors?.required
+                        "
+                      >
+                        Name is required
+                      </span>
+                    </div>
+
+                    <!-- Email -->
                     <div class="form-group">
                       <label for="Email">Email</label>
                       <input
@@ -186,36 +240,18 @@
                         Enter a valid email address
                       </span>
                     </div>
-                    <div class="form-group">
-                      <label for="fullname">Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="fullName"
-                        placeholder="Full Name"
-                        formControlName="fullName"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
-                          (registerFormControl.fullName.touched || submitted) &&
-                          registerFormControl.fullName.errors?.required
-                        "
-                      >
-                        Full Name is required
-                      </span>
-                    </div>
 
+                    <!-- Message  -->
                     <div class="form-group">
-                      <label for="comment">Comment</label>
+                      <label for="message">Message</label>
                       <textarea
                         class="form-control"
-                        formControlName="comment"
+                        formControlName="message"
                         placeholder="Please leave a message"
-                        name="comment"
+                        name="message"
                         rows="4"
-
+                        maxlength="500"
+                        (keyup)="onKeyUp($event)"
                         required
                       >
                       </textarea>
@@ -225,15 +261,15 @@
                       <span
                         class="text-danger"
                         *ngIf="
-                          (registerFormControl.comment.touched || submitted) &&
-                          registerFormControl.comment.errors?.required
+                          (registerFormControl.message.touched || submitted) &&
+                          registerFormControl.message.errors?.required
                         "
                       >
                         Message is required
                       </span>
                       <span
                         class="text-danger"
-                        *ngIf="registerFormControl.comment.errors?.maxlength"
+                        *ngIf="registerFormControl.message.errors?.maxlength"
                       >
                         Message is too long
                       </span>
@@ -244,15 +280,16 @@
                       class="btn btn-primary"
                       [disabled]="!FormData.valid"
                       [ngClass]="FormData.valid ? ' :hover' : ''"
-                      (click)="onSend($event)"
                     >
                       <i
                         class="far fa-paper-plane fa-2x"
                         [ngClass]="FormData.valid ? ' :hover' : ''"
                       ></i>
                     </button>
-                    <div *ngIf="showMessage === true" class="sent-msg">Message sent successfully!</div>
-
+                    <div *ngIf="isSubmitted" class="sent-msg">
+                      Message sent successfully!
+                    </div>
+                    <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.</div>
                   </form>
                 </div>
               </div>

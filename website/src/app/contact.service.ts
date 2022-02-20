@@ -6,7 +6,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ContactService {
-  private mailApi = 'https://mailthis.to/volcannobis';
+  // Formspree url
+  private mailApi = 'https://formspree.io/f/mnqwdonv';
 
   constructor(private http: HttpClient) {}
 
@@ -24,4 +25,6 @@ export class ContactService {
       )
     );
   }
+
+
 }
