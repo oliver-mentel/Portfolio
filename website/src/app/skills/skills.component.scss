@@ -18,6 +18,14 @@
   color: #346e93;
 }
 
+.carousel:focus {
+  outline: none !important;
+}
+
+::ng-deep .carousel-control {
+  margin: 10px;
+}
+
 #skills-subheading h4 {
   color: white;
   text-transform: uppercase;
@@ -159,12 +167,10 @@ a {
   color: #337ab7;
 }
 .section .cnt-block p {
-  color: #2a2a2a;
   color: white;
   font-weight: 100 !important;
   font-size: 1.7vh;
   padding: 0px 40px;
-  font-weight: 400;
 }
 .section .cnt-block .follow-us {
   margin: 20px 0 0;
