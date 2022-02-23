@@ -24,7 +24,7 @@
   padding-bottom: 0px;
   font-weight: 200;
   text-align: center;
-  padding-bottom: 50px;
+  padding: 50px;
 }
 
 .row.heading h2 {
@@ -52,6 +52,14 @@ li {
   margin-bottom: 30px;
   color: #2a2a2a;
 }
+
+a {
+  color: white !important;
+  font-weight: 200;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+}
+
 .heading.heading-icon {
   display: block;
 }
@@ -74,32 +82,37 @@ li {
   border: solid white 2px;
 }
 .practice-area .inner h3 {
-  color: #3c3c3c;
-  font-size: 24px;
+  color: white;
+  font-size: 40px;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 10px 0;
 }
 
 .header-back {
   margin-bottom: 40px;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
 }
 
 .practice-area .inner p {
-  font-size: 14px;
+  font-size: 15px;
+  font-size: 3.5vw;
   line-height: 22px;
   font-weight: 400;
 }
-// .practice-area .inner img {
-//   display: inline-block;
-// }
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+}
 
 .section .cnt-block {
   float: left;
   width: 100%;
   min-height: 650px;
   max-height: 700px;
-  background: #8f98c1;
+  background: #9e9e9e;
   padding: 30px 20px;
   text-align: center;
   border: 2px solid #d5d5d5;
@@ -131,9 +144,10 @@ li {
   margin-bottom: 20px;
 }
 .section .cnt-block h3 {
-  color: #2a2a2a;
-  font-size: 20px;
-  font-weight: 500;
+  // color: #2a2a2a;
+  color: white !important;
+  font-size: 26px;
+  font-weight: 200;
   padding: 20px 0;
   text-transform: uppercase;
 }
@@ -146,8 +160,10 @@ li {
 }
 .section .cnt-block p {
   color: #2a2a2a;
-  font-size: 13px;
-  line-height: 20px;
+  color: white;
+  font-weight: 100 !important;
+  font-size: 1.7vh;
+  padding: 0px 40px;
   font-weight: 400;
 }
 .section .cnt-block .follow-us {

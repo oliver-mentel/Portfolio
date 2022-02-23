@@ -6,20 +6,19 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Output() clickElement: EventEmitter<any> = new EventEmitter();
   active: boolean = false;
   blur: string = '';
-  collapse: string = '';
   closeNav: boolean = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    // use index 26 for Prod, 22 for local development
-    this.scrollingToPosition(window.location.href.slice(26));
-    // console.log(window.location.href.slice(26));
-  }
+  // ngOnInit(): void {
+  //   // use index 26 for Prod, 22 for local development
+  //   // this.scrollingToPosition(window.location.href.slice(22));
+  //   // console.log(window.location.href.slice(22));
+  // }
 
   scrollingToPosition(idNameOfSection: string) {
     this.clickElement.emit(idNameOfSection);

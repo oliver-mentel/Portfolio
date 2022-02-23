@@ -13,7 +13,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
   ],
 })
 export class ProjectsComponent implements OnInit {
-  noWrapSlides = false;
+  // noWrapSlides = false;
   isBiggerThan992px = true;
 
   constructor() {}

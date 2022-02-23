@@ -1,7 +1,12 @@
 <div class="container-fluid">
   <nav
     class="navbar fixed-top navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown"
-    id="navbar" [ngClass]="blur" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)" [ngClass]="closeNav" (mouseleave)="closeOnLeave()"
+    id="navbar"
+    [ngClass]="blur"
+    (mouseover)="changeStyle($event)"
+    (mouseout)="changeStyle($event)"
+    [ngClass]="closeNav"
+    (mouseleave)="closeOnLeave()"
   >
     <a
       class="navbar-brand"
@@ -40,13 +45,11 @@
       </button>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav" >
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a
             class="nav-link"
-            [routerLink]="['aboutMe']"
-            routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             (click)="changeStyle($event)"
@@ -61,8 +64,6 @@
             (click)="scrollingToPosition('skills')"
             (click)="changeStyle($event)"
             (click)="closeBurger()"
-            [routerLink]="['skills']"
-            routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             >Skills</a
@@ -74,9 +75,7 @@
             (click)="scrollingToPosition('projects')"
             (click)="changeStyle($event)"
             (click)="closeBurger()"
-            [routerLink]="['projects']"
             fragment="projects"
-            routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             >Projects</a
@@ -88,8 +87,6 @@
             (click)="scrollingToPosition('contact')"
             (click)="changeStyle($event)"
             (click)="closeBurger()"
-            [routerLink]="['contact']"
-            routerLinkActive="active_route"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             >Contact</a
