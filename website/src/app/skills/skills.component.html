@@ -29,80 +29,6 @@
             [interval]="false"
             class="carousel"
           >
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <!--- HTML, CSS & JS -->
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(0)"
-                        [@flipState]="skillCard[0]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/HTML_CSS_JS.jpg-1.png"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://developer.mozilla.org/en-US/"
-                                target="_blank"
-                                >HTML, CSS & JS</a
-                              >
-                            </h3>
-                            <p>
-                              My initial contact with HTML & CSS was back in my
-                              teen days, spending time redesigning WordPress
-                              sites. After learning the basics of HTML & CSS I
-                              moved on with JavaScript. I have been developing
-                              with JS since 2019, most with TypeScript.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-desktop fa-2x"></i>
-                                  <li>
-                                    My Portfolio Website other
-                                    Projects
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fab fa-instagram fa-2x"></i>
-                                  <li>
-                                    Instagram Clone (programmed with Ruby on
-                                    Rails)
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fab fa-wordpress-simple fa-2x"></i>
-                                  <li>Wordpress websites</li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
 
             <!--- Angular -->
             <slide>
@@ -177,6 +103,148 @@
               </div>
             </slide>
 
+            <!--- VueJS -->
+            <slide>
+              <div class="text-center text-white">
+                <ul class="row">
+                  <li class="col-sm-12">
+                    <div class="tp-wrapper">
+                      <div
+                        class="tp-box"
+                        (click)="toggleFlipCard(3)"
+                        [@flipState]="skillCard[3]['status']"
+                      >
+                        <div class="tp-box__side tp-box__front">
+                          <div class="cnt-block equal-hight">
+                            <figure>
+                              <img
+                                src="assets/Logo/VueJS_Logo.svg"
+                                class="img-responsive"
+                                alt=""
+                              />
+                            </figure>
+                            <h3>
+                              <a
+                                href="https://vuejs.org/"
+                                target="_blank"
+                                >Vue.js</a
+                              >
+                            </h3>
+                            <p>
+                              In order to support the ATLAS Team in Swisscom I was given the chance
+                              to further expand my front-end knowledge by learning Vue.js. In my opinion
+                              the benefits come from its simplicity, reusability and big open community.
+                            </p>
+                            <div class="projects">
+                              <p>Click to see Projects</p>
+                              <i class="fas fa-reply"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tp-box__side tp-box__back">
+                          <div class="cnt-block equal-hight">
+                            <h3 class="header-back">Tasks & Projects</h3>
+                            <h6>
+                              <ul>
+                                <div class="project-item">
+                                  <i class="fas fa-edit fa-2x"></i>
+                                  <li>
+                                    Implementation of features, bug fixes and unit-testing
+                                    for SDC (Swisscom Data Console)
+                                  </li>
+                                </div>
+                                <div class="project-item">
+                                  <i class="fas fa-gamepad fa-2x"></i>
+                                  <li>
+                                    Clicker Game
+                                  </li>
+                                </div>
+                              </ul>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </slide>
+
+            <!--- HTML, CSS & JS -->
+            <slide>
+              <div class="text-center text-white">
+                <ul class="row">
+                  <li class="col-sm-12">
+                    <div class="tp-wrapper">
+                      <div
+                        class="tp-box"
+                        (click)="toggleFlipCard(0)"
+                        [@flipState]="skillCard[0]['status']"
+                      >
+                        <div class="tp-box__side tp-box__front">
+                          <div class="cnt-block equal-hight">
+                            <figure>
+                              <img
+                                src="assets/Logo/HTML_CSS_JS.jpg-1.png"
+                                class="img-responsive"
+                                alt=""
+                              />
+                            </figure>
+                            <h3>
+                              <a
+                                href="https://developer.mozilla.org/en-US/"
+                                target="_blank"
+                                >HTML, CSS & JS</a
+                              >
+                            </h3>
+                            <p>
+                              My initial contact with HTML & CSS was back in my
+                              teen days, spending time redesigning WordPress
+                              sites. After learning the basics of HTML & CSS I
+                              moved on with JavaScript. I have been developing
+                              with JS since 2019, most with TypeScript.
+                            </p>
+                            <div class="projects">
+                              <p>Click to see Projects</p>
+                              <i class="fas fa-reply"></i>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tp-box__side tp-box__back">
+                          <div class="cnt-block">
+                            <h3 class="header-back">Tasks & Projects</h3>
+                            <h6>
+                              <ul>
+                                <div class="project-item">
+                                  <i class="fas fa-desktop fa-2x"></i>
+                                  <li>
+                                    My Portfolio Website other
+                                    Projects
+                                  </li>
+                                </div>
+                                <div class="project-item">
+                                  <i class="fab fa-instagram fa-2x"></i>
+                                  <li>
+                                    Instagram Clone (programmed with Ruby on
+                                    Rails)
+                                  </li>
+                                </div>
+                                <div class="project-item">
+                                  <i class="fab fa-wordpress-simple fa-2x"></i>
+                                  <li>Wordpress websites</li>
+                                </div>
+                              </ul>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </slide>
+
             <!-- Python -->
             <slide>
               <div class="text-center text-white">
@@ -230,74 +298,6 @@
                                 <div class="project-item">
                                   <i class="far fa-window-maximize fa-2x"></i>
                                   <li>Web Development with Django Framework</li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-
-            <!-- C# -->
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(3)"
-                        [@flipState]="skillCard[3]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/C_Sharp_logo.jpg.png"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://docs.microsoft.com/en-us/dotnet/csharp/"
-                                target="_blank"
-                                >C#</a
-                              >
-                            </h3>
-                            <p>
-                              C# was my first OOP (Object-Oriented Programming)
-                              language which I learned and currently am still
-                              further improving. Some small projects have been
-                              developed with this language.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block equal-hight">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-gamepad fa-2x"></i>
-                                  <li>
-                                    Various Games (Snake, Tic Tac Toe, Memory
-                                    etc.)
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="far fa-window-maximize fa-2x"></i>
-                                  <li>
-                                    Basic Car Auction Program (built with WPF)
-                                  </li>
                                 </div>
                               </ul>
                             </h6>
