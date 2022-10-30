@@ -1,8 +1,8 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import {
-  FormGroup,
-  FormBuilder,
-  FormControl,
+  UntypedFormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
   Validators,
 } from '@angular/forms';
 import { ContactService } from '../contact.service';
@@ -13,7 +13,7 @@ import { ContactService } from '../contact.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  FormData: FormGroup;
+  FormData: UntypedFormGroup;
   isBiggerThan992px = true;
   isSubmitted: boolean = false;
   hasError: boolean = false;
@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
   maxNumberOfCharacters = 500;
   counter = true;
 
-  constructor(private builder: FormBuilder, private contact: ContactService) {}
+  constructor(private builder: UntypedFormBuilder, private contact: ContactService) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -36,11 +36,11 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.FormData = this.builder.group({
-      name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [
+      name: new UntypedFormControl('', [Validators.required]),
+      email: new UntypedFormControl('', [
         Validators.compose([Validators.required, Validators.email]),
       ]),
-      message: new FormControl('', [
+      message: new UntypedFormControl('', [
         Validators.compose([Validators.required, Validators.maxLength(500)]),
       ]),
     });
