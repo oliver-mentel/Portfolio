@@ -13,7 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from './contact.service';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
@@ -27,16 +27,17 @@ import { SkillsComponent } from './skills/skills.component';
     FooterComponent,
     SkillsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CarouselModule.forRoot(),
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    CommonModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        CarouselModule.forRoot(),
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        CommonModule,
+        NgOptimizedImage,
+    ],
   providers: [ContactService],
   bootstrap: [AppComponent],
 })

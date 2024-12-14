@@ -12,17 +12,16 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    if (window.innerWidth >= 992) {
-      this.isBiggerThan992px = true;
-      this.show = false;
-    } else {
-      this.isBiggerThan992px = false;
-    }
+    this.updateView(window.innerWidth);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (event.target.innerWidth >= 992) {
+    this.updateView(event.target.innerWidth);
+  }
+
+  private updateView(width: number): void {
+    if (width >= 992) {
       this.isBiggerThan992px = true;
       this.show = false;
     } else {

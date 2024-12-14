@@ -2,14 +2,14 @@
   position: relative;
 }
 
-#right-box {
+.right-box {
   min-height: 100vh;
-  padding: 0px;
+  padding: 0;
   border-top: 2px solid white;
 
 }
 
-#left-box {
+.left-box {
   border-right: 2px solid white;
   border-top: 2px solid white;
   justify-content: center;
@@ -32,8 +32,7 @@
   display:block;
   position: relative;
   min-height: 100vh;
-  padding: 10%;
-  padding-top: 5%;
+  padding: 5% 10% 10%;
   margin-bottom: 20px;
 
 }
@@ -48,7 +47,6 @@
 .slide-content {
   display: block;
   margin-top: 5%;
-  margin-bottom: 50px;
   font-weight: 400;
   color: white;
   padding-bottom: 5%;
@@ -57,7 +55,7 @@
 
 h5 {
   padding-left: 40px;
-  font-size: 1em;
+  font-size: 1.2rem;
   color: white;
   font-weight: 400;
 }
@@ -74,14 +72,10 @@ h5 {
 .map {
   display: flex;
   flex-direction: column;
-  // max-width: 500px;
-  // max-height: 200px;
   min-height: 30vh;
   width: 100%;
-  margin: 0 auto;
-  padding: 0px 20px;
-  margin-bottom: 50px;
-  margin-top: 5%;
+  padding: 0 20px;
+  margin: 5% auto 50px;
 
 }
 
@@ -90,8 +84,8 @@ iframe {
   flex: 1 1 100%;
   align-items: baseline;
   max-height: 500px;
-  -webkit-box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
-box-shadow: 8px 9px 22px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 8px 9px 22px 0 rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 9px 22px 0 rgba(0,0,0,0.75);
+box-shadow: 8px 9px 22px 0 rgba(0,0,0,0.75);
 }
 

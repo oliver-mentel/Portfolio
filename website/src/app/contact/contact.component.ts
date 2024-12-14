@@ -21,17 +21,12 @@ export class ContactComponent implements OnInit {
   @Input()
   numberOfCharacters1 = 0;
   maxNumberOfCharacters = 500;
-  counter = true;
 
   constructor(private builder: UntypedFormBuilder, private contact: ContactService) {}
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (event.target.innerWidth >= 992) {
-      this.isBiggerThan992px = true;
-    } else {
-      this.isBiggerThan992px = false;
-    }
+  onResize(event: { target: { innerWidth: number; }; }) {
+    this.isBiggerThan992px = event.target.innerWidth >= 992;
   }
 
   ngOnInit() {
@@ -45,11 +40,7 @@ export class ContactComponent implements OnInit {
       ]),
     });
 
-    if (window.innerWidth >= 992) {
-      this.isBiggerThan992px = true;
-    } else {
-      this.isBiggerThan992px = false;
-    }
+    this.isBiggerThan992px = window.innerWidth >= 992;
   }
 
   get registerFormControl() {
@@ -57,7 +48,7 @@ export class ContactComponent implements OnInit {
   }
 
   // Email Service Call to contact.service.ts
-  onSubmit(FormData) {
+  onSubmit(FormData: any) {
     // console.log(FormData);
     this.contact.PostMessage(FormData).subscribe(
       (response) => {
@@ -79,6 +70,7 @@ export class ContactComponent implements OnInit {
   }
 
   // Character Counter
+    submitted: boolean;
   onKeyUp(event: any): void {
     this.numberOfCharacters1 = event.target.value.length;
 

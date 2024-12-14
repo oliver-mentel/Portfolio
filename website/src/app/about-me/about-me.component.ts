@@ -19,18 +19,10 @@ export class AboutMeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (event.target.innerWidth >= 992) {
-      this.isBiggerThan992px = true;
-    } else {
-      this.isBiggerThan992px = false;
-    }
+    this.isBiggerThan992px = event.target.innerWidth >= 992;
   }
 
   ngOnInit() {
-    if (window.innerWidth >= 992) {
-      this.isBiggerThan992px = true;
-    } else {
-      this.isBiggerThan992px = false;
-    }
+    this.isBiggerThan992px = window.innerWidth >= 992;
   }
 }

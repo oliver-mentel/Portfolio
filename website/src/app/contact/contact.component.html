@@ -1,321 +1,342 @@
 <!-- Boxes About Me -->
 <div (window:resize)="onResize($event)">
-  <!-- When screen width is smaller than 992px -->
-  <div *ngIf="!isBiggerThan992px">
-    <section>
-      <!-- Left Box-->
-      <div class="container-fluid">
-        <div class="row is-flex">
-          <div
-            class="col-md-12 col-lg-6"
-            id="right-box"
-            *ngIf="isBiggerThan992px"
-            [ngStyle]="
+    <!-- When screen width is smaller than 992px -->
+    <div *ngIf="!isBiggerThan992px">
+        <section>
+            <!-- Left Box-->
+            <div class="container-fluid">
+                <div class="row is-flex">
+                    <div
+                            class="col-md-12 col-lg-6 right-box"
+                            *ngIf="isBiggerThan992px"
+                            [ngStyle]="
               !isBiggerThan992px
                 ? { 'border-bottom': 'none' }
                 : { 'border-bottom': '2px solid white' }
             "
-          >
-            <div style="display: table">
-              <div style="display: table-cell; vertical-align: middle">
-                <h2 class="heading">Contact</h2>
-              </div>
-            </div>
-          </div>
+                    >
+                        <div style="display: table">
+                            <div style="display: table-cell; vertical-align: middle">
+                                <h2 class="heading">Contact</h2>
+                            </div>
+                        </div>
+                    </div>
 
-          <!-- Right Box -->
-          <div
-            class="col-md-12 col-lg-6"
-            id="left-box"
-            [ngStyle]="
+                    <!-- Right Box -->
+                    <div
+                            class="col-md-12 col-lg-6 left-box"
+                            [ngStyle]="
               !isBiggerThan992px
                 ? { 'border-right': 'none' }
                 : { 'border-right': '2px solid white' }
             "
-          >
-            <h2 class="contact-title">Let's Build Something Together</h2>
-            <h5 class="contact-description">
-              Feel free to reach out if you're looking for a developer, have a
-              question, or just want to connect.
-            </h5>
-            <div class="container-fluid">
-              <div class="row is-flex">
-                <div class="col-sm-12">
-                  <!-- Form -->
-                  <form
-                    [formGroup]="FormData"
-                    (ngSubmit)="onSubmit(FormData.value)"
-                  >
-                  <!-- Name -->
-                    <div class="form-group">
-                      <label for="name">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="name"
-                        placeholder="Name"
-                        formControlName="name"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                    >
+                        <h2 class="contact-title">Let's Build Something Together</h2>
+                        <h5 class="contact-description">
+                            Feel free to reach out if you're looking for a developer, have a
+                            question, or just want to connect.
+                        </h5>
+                        <div class="linkedin-container">
+                            <a class="linkedin-button" href="https://www.linkedin.com/in/oliver-mentel-73b539164/" target="_blank"
+                               aria-label="Visit my LinkedIn profile">
+                                <span>LinkedIn Profile</span>
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <h5 class="contact-description">OR</h5>
+                        <div class="container-fluid">
+                            <div class="row is-flex">
+                                <div class="col-sm-12">
+                                    <!-- Form -->
+                                    <form
+                                            [formGroup]="FormData"
+                                            (ngSubmit)="onSubmit(FormData.value)"
+                                    >
+                                        <!-- Name -->
+                                        <div class="form-group">
+                                            <label for="nameInputSmall">Name</label>
+                                            <input
+                                                    type="text"
+                                                    id="nameInputSmall"
+                                                    class="form-control"
+                                                    name="name"
+                                                    placeholder="Name"
+                                                    formControlName="name"
+                                                    required
+                                            />
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           (registerFormControl.name.touched || submitted) &&
                           registerFormControl.name.errors?.required
                         "
-                      >
+                                            >
                         Name is required
                       </span>
-                    </div>
+                                        </div>
 
-                    <!-- Email -->
-                    <div class="form-group">
-                      <label for="Email">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email"
-                        formControlName="email"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                        <!-- Email -->
+                                        <div class="form-group">
+                                            <label for="emailInputSmall">Email</label>
+                                            <input
+                                                    type="email"
+                                                    id="emailInputSmall"
+                                                    class="form-control"
+                                                    name="email"
+                                                    aria-describedby="emailHelp"
+                                                    placeholder="Enter email"
+                                                    formControlName="email"
+                                                    required
+                                            />
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           (registerFormControl.email.touched || submitted) &&
                           registerFormControl.email.errors?.required
                         "
-                      >
+                                            >
                         Email is required
                       </span>
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           registerFormControl.email.touched &&
                           registerFormControl.email.errors?.email
                         "
-                      >
+                                            >
                         Enter a valid email address
                       </span>
-                    </div>
+                                        </div>
 
-                    <!-- Message -->
-                    <div class="form-group">
-                      <label for="message">Message</label>
-                      <textarea
-                        class="form-control"
-                        formControlName="message"
-                        name="message"
-                        id="text-area"
-                        placeholder="Please Leave a message"
-                        maxlength="500"
-                        (keyup)="onKeyUp($event)"
-                        required
-                      >
+                                        <!-- Message -->
+                                        <div class="form-group">
+                                            <label for="messageInputSmall">Message</label>
+                                            <textarea
+                                                    class="form-control text-area"
+                                                    id="messageInputSmall"
+                                                    formControlName="message"
+                                                    name="message"
+                                                    placeholder="Please Leave a message"
+                                                    maxlength="500"
+                                                    (keyup)="onKeyUp($event)"
+                                                    required
+                                            >
                       </textarea>
-                      <div>
-                        <div class="char-counter" style="float: left">
-                          {{ numberOfCharacters1 }} /
-                          {{ maxNumberOfCharacters }}
-                        </div>
+                                            <div>
+                                                <div class="char-counter" style="float: left">
+                                                    {{ numberOfCharacters1 }} /
+                                                    {{ maxNumberOfCharacters }}
+                                                </div>
 
-                        <span
-                          class="text-danger"
-                          style="float: right"
-                          *ngIf="
+                                                <span
+                                                        class="text-danger"
+                                                        style="float: right"
+                                                        *ngIf="
                             (registerFormControl.message.touched ||
                               submitted) &&
                             registerFormControl.message.errors?.required
                           "
-                        >
+                                                >
                           Message is required
                         </span>
-                        <span
-                          class="text-danger"
-                          style="float: right"
-                          *ngIf="registerFormControl.message.errors?.maxlength"
-                        >
+                                                <span
+                                                        class="text-danger"
+                                                        style="float: right"
+                                                        *ngIf="registerFormControl.message.errors?.maxlength"
+                                                >
                           Message is too long
                         </span>
-                      </div>
-                    </div>
+                                            </div>
+                                        </div>
 
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      [disabled]="!FormData.valid"
-                      [ngClass]="FormData.valid ? ' :hover' : ''"
-                    >
-                      <i
-                        class="far fa-paper-plane fa-2x"
-                        [ngClass]="FormData.valid ? ' :hover' : ''"
-                      ></i>
-                    </button>
-                    <div *ngIf="isSubmitted" class="sent-msg">
-                      Message sent successfully!
+                                        <button
+                                                type="submit"
+                                                class="btn btn-primary"
+                                                [disabled]="!FormData.valid"
+                                                [ngClass]="FormData.valid ? ' :hover' : ''"
+                                        >
+                                            <i
+                                                    class="far fa-paper-plane fa-2x"
+                                                    [ngClass]="FormData.valid ? ' :hover' : ''"
+                                            ></i>
+                                        </button>
+                                        <div *ngIf="isSubmitted" class="sent-msg">
+                                            Message sent successfully!
+                                        </div>
+                                        <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.</div>
-                  </form>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+        </section>
+    </div>
 
-  <!-- When screen width is greater than 992px -->
-  <div *ngIf="isBiggerThan992px">
-    <section>
-      <!-- Left Box-->
-      <div class="container-fluid">
-        <div class="row is-flex">
-          <div class="col-md-12 col-lg-6" id="left-box">
-            <h2 class="contact-title">Let's Build Something Together</h2>
-            <h5 class="contact-description">
-              Feel free to reach out if you're looking for a developer, have a
-              question, or just want to connect.
-            </h5>
+    <!-- When screen width is greater than 992px -->
+    <div *ngIf="isBiggerThan992px">
+        <section>
+            <!-- Left Box-->
             <div class="container-fluid">
-              <div class="row is-flex">
-                <div class="col-12">
+                <div class="row is-flex">
+                    <div class="col-md-12 col-lg-6 left-box">
+                        <h2 class="contact-title">Let's Build Something Together</h2>
+                        <h5 class="contact-description">
+                            Feel free to reach out if you're looking for a developer, have a
+                            question, or just want to connect.
+                        </h5>
+                        <div class="linkedin-container">
+                            <a class="linkedin-button" href="https://www.linkedin.com/in/oliver-mentel-73b539164/" target="_blank"
+                               aria-label="Visit my LinkedIn profile">
+                                <span>LinkedIn Profile</span>
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <h5 class="contact-description">OR</h5>
+                        <div class="container-fluid">
+                            <div class="row is-flex">
+                                <div class="col-12">
 
-                  <!-- Form -->
-                  <form
-                    [formGroup]="FormData"
-                    (ngSubmit)="onSubmit(FormData.value)"
-                  >
-                    <!-- Name -->
-                    <div class="form-group">
-                      <label for="name">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="name"
-                        placeholder="Name"
-                        formControlName="name"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                    <!-- Form -->
+                                    <form
+                                            [formGroup]="FormData"
+                                            (ngSubmit)="onSubmit(FormData.value)"
+                                    >
+                                        <!-- Name -->
+                                        <div class="form-group">
+                                            <label for="nameInputWide">Name</label>
+                                            <input
+                                                    type="text"
+                                                    id="nameInputWide"
+                                                    class="form-control"
+                                                    name="name"
+                                                    placeholder="Name"
+                                                    formControlName="name"
+                                                    required
+                                            />
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           (registerFormControl.name.touched || submitted) &&
                           registerFormControl.name.errors?.required
                         "
-                      >
+                                            >
                         Name is required
                       </span>
-                    </div>
+                                        </div>
 
-                    <!-- Email -->
-                    <div class="form-group">
-                      <label for="Email">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email"
-                        formControlName="email"
-                        required
-                      />
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                        <!-- Email -->
+                                        <div class="form-group">
+                                            <label for="emailInputWide">Email</label>
+                                            <input
+                                                    type="email"
+                                                    id="emailInputWide"
+                                                    class="form-control"
+                                                    name="email"
+                                                    aria-describedby="emailHelp"
+                                                    placeholder="Enter email"
+                                                    formControlName="email"
+                                                    required
+                                            />
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           (registerFormControl.email.touched || submitted) &&
                           registerFormControl.email.errors?.required
                         "
-                      >
+                                            >
                         Email is required
                       </span>
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           registerFormControl.email.touched &&
                           registerFormControl.email.errors?.email
                         "
-                      >
+                                            >
                         Enter a valid email address
                       </span>
-                    </div>
+                                        </div>
 
-                    <!-- Message  -->
-                    <div class="form-group">
-                      <label for="message">Message</label>
-                      <textarea
-                        class="form-control"
-                        formControlName="message"
-                        placeholder="Please leave a message"
-                        name="message"
-                        rows="4"
-                        maxlength="500"
-                        (keyup)="onKeyUp($event)"
-                        required
-                      >
+                                        <!-- Message  -->
+                                        <div class="form-group">
+                                            <label for="messageInputWide">Message</label>
+                                            <textarea
+                                                    class="form-control"
+                                                    id="messageInputWide"
+                                                    formControlName="message"
+                                                    placeholder="Please leave a message"
+                                                    name="message"
+                                                    rows="4"
+                                                    maxlength="500"
+                                                    (keyup)="onKeyUp($event)"
+                                                    required
+                                            >
                       </textarea>
-                      <div style="color: white; font-weight: 200">
-                        {{ numberOfCharacters1 }} / {{ maxNumberOfCharacters }}
-                      </div>
-                      <span
-                        class="text-danger"
-                        *ngIf="
+                                            <div style="color: white; font-weight: 200">
+                                                {{ numberOfCharacters1 }} / {{ maxNumberOfCharacters }}
+                                            </div>
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="
                           (registerFormControl.message.touched || submitted) &&
                           registerFormControl.message.errors?.required
                         "
-                      >
+                                            >
                         Message is required
                       </span>
-                      <span
-                        class="text-danger"
-                        *ngIf="registerFormControl.message.errors?.maxlength"
-                      >
+                                            <span
+                                                    class="text-danger"
+                                                    *ngIf="registerFormControl.message.errors?.maxlength"
+                                            >
                         Message is too long
                       </span>
+                                        </div>
+
+                                        <button
+                                                type="submit"
+                                                class="btn btn-primary"
+                                                [disabled]="!FormData.valid"
+                                                [ngClass]="FormData.valid ? ' :hover' : ''"
+                                        >
+                                            <i
+                                                    class="far fa-paper-plane fa-2x"
+                                                    [ngClass]="FormData.valid ? ' :hover' : ''"
+                                            ></i>
+                                        </button>
+                                        <div *ngIf="isSubmitted" class="sent-msg">
+                                            Message sent successfully!
+                                        </div>
+                                        <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      [disabled]="!FormData.valid"
-                      [ngClass]="FormData.valid ? ' :hover' : ''"
-                    >
-                      <i
-                        class="far fa-paper-plane fa-2x"
-                        [ngClass]="FormData.valid ? ' :hover' : ''"
-                      ></i>
-                    </button>
-                    <div *ngIf="isSubmitted" class="sent-msg">
-                      Message sent successfully!
+                    <!-- Right Box -->
+                    <div class="col-md-12 col-lg-6 right-box">
+                        <div style="display: table">
+                            <div style="display: table-cell; vertical-align: middle">
+                                <h2 class="heading">Contact</h2>
+                            </div>
+                        </div>
                     </div>
-                    <div *ngIf="hasError" class="sent-msg">Something went wrong, please reload the page and try again.</div>
-                  </form>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <!-- Right Box -->
-          <div class="col-md-12 col-lg-6" id="right-box">
-            <div style="display: table">
-              <div style="display: table-cell; vertical-align: middle">
-                <h2 class="heading">Contact</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Empty row for dashed line-->
-  <section>
-    <div class="container-fluid">
-      <div class="row is-flex">
-        <div class="col-6" id="left-box-empty"></div>
-        <div class="col-6" id="right-box-empty"></div>
-      </div>
+        </section>
     </div>
-  </section>
+
+    <!-- Empty row for dashed line-->
+    <section>
+        <div class="container-fluid">
+            <div class="row is-flex">
+                <div class="col-6 left-box-empty"></div>
+                <div class="col-6 right-box-empty"></div>
+            </div>
+        </div>
+    </section>
 </div>

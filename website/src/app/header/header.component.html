@@ -2,27 +2,27 @@
   <nav
     class="navbar fixed-top navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown"
     id="navbar"
-    [ngClass]="blur"
+    [ngClass]="{ 'add-blur': blur, 'close-nav': closeNav }"
     (mouseover)="changeStyle($event)"
     (mouseout)="changeStyle($event)"
-    [ngClass]="closeNav"
     (mouseleave)="closeOnLeave()"
   >
     <a
       class="navbar-brand"
-      (click)="scrollingToPosition('home')"
-      (click)="closeBurger()"
+      (click)="scrollingToPosition('home'); closeBurger()"
       data-toggle="collapse"
       data-target=".navbar-collapse.show"
       [routerLink]="['home']"
       routerLinkActive="active_router"
       style="cursor: pointer"
-      ><img
-        src="assets/Logo/Oliver_Mentel_Logo_White.svg"
+    >
+      <img
+        ngSrc="assets/Logo/Oliver_Mentel_Logo_White.svg"
         width="60"
         height="60"
         alt=""
-    /></a>
+      />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -37,7 +37,7 @@
         class="hamburger hamburger--spring"
         type="button"
         (click)="active = !active"
-        [ngClass]="active ? ' is-active' : ''"
+        [ngClass]="{ 'is-active': active }"
       >
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -52,45 +52,33 @@
             class="nav-link"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
-            (click)="changeStyle($event)"
-            (click)="closeBurger()"
-            (click)="scrollingToPosition('aboutMe')"
-            >About Me</a
-          >
+            (click)="handleClick($event, 'aboutMe')"
+          >About Me</a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            (click)="scrollingToPosition('skills')"
-            (click)="changeStyle($event)"
-            (click)="closeBurger()"
+            (click)="handleClick($event, 'skills')"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
-            >Skills</a
-          >
+          >Skills</a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            (click)="scrollingToPosition('projects')"
-            (click)="changeStyle($event)"
-            (click)="closeBurger()"
+            (click)="handleClick($event, 'projects')"
             fragment="projects"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
-            >Projects</a
-          >
+          >Projects</a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            (click)="scrollingToPosition('contact')"
-            (click)="changeStyle($event)"
-            (click)="closeBurger()"
+            (click)="handleClick($event, 'contact')"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
-            >Contact</a
-          >
+          >Contact</a>
         </li>
       </ul>
     </div>

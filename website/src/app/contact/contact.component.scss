@@ -1,30 +1,30 @@
 .col-sm-12 {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
-#right-box {
+.right-box {
   height: 100vh;
   border-bottom: 2px solid white;
   border-top: 2px solid white;
   justify-content: center;
 }
 
-#left-box {
+.left-box {
   min-height: 100vh;
-  padding: 0px !important;
+  padding: 0 !important;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
   border-top: 2px solid white;
 }
 
-#left-box-empty {
+.left-box-empty {
   border-right: 2px solid white;
   height: 50vh;
   padding: 0 !important;
 }
 
-#right-box-empty {
+.right-box-empty {
   height: 50vh;
   padding: 0 !important;
 }
@@ -55,19 +55,16 @@
 .contact-title {
   color: white;
   text-transform: uppercase;
-  padding: 10% 10% 0px 10%;
   font-weight: 200;
   text-align: center;
-  padding-bottom: 50px;
+  padding: 10% 10% 50px;
 }
 
 .contact-description {
-  font-weight: 700;
-  padding: 0px 50px;
   color: white;
   text-align: center;
   font-weight: 300;
-  padding-bottom: 50px;
+  padding: 0 50px 50px;
 }
 
 label {
@@ -77,10 +74,7 @@ label {
 
 button {
   display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
   border: 2px solid white !important;
   background-color: #1b3b4e !important;
   cursor: default;
@@ -106,10 +100,8 @@ button {
 }
 
 .form-group {
-  padding: 0px 50px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding: 0 50px;
+  margin: 0 0 10px 0;
 }
 
 .text-danger {
@@ -124,19 +116,56 @@ button {
 .sent-msg {
   color: rgb(255, 255, 255);
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   font-weight: 300;
 }
 
-#text-area {
+.text-area {
   height: 100px;
 }
 
-#text-area:focus {
+.text-area:focus {
   height: 200px;
   -webkit-transition: height 1s ease;
   -moz-transition: height 1s ease;
   -o-transition: height 1s ease;
   transition: height 1s ease;
+}
+
+.linkedin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.linkedin-button {
+  text-align: center;
+  background-color: #0077b5;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s; /* Apply transition for color and transform */
+}
+
+.linkedin-button:hover {
+  background-color: #005983; /* Darker shade on hover */
+  transform: scale(1.1); /* Scale the entire button */
+}
+
+.linkedin-button i {
+  color: white;
+  font-size: 1.2rem; /* Make the icon larger than the text */
+  margin-left: 8px; /* Spacing between icon and text */
+}
+
+.linkedin-button span {
+  color: white;
+  font-size: 1rem; /* Set the size of the text */
+  font-weight: bold;
 }

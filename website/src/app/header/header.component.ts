@@ -1,5 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Output, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,33 +11,41 @@ export class HeaderComponent {
   blur: string = '';
   closeNav: boolean = false;
 
-  constructor() {}
-
-  // ngOnInit(): void {
-  //   // use index 26 for Prod, 22 for local development
-  //   // this.scrollingToPosition(window.location.href.slice(22));
-  //   // console.log(window.location.href.slice(22));
-  // }
+  constructor(private renderer: Renderer2) {}
 
   scrollingToPosition(idNameOfSection: string) {
     this.clickElement.emit(idNameOfSection);
   }
 
-  changeStyle($event) {
-    this.blur = $event.type == 'mouseover' ? 'add-blur' : '';
+  changeStyle($event: { type: string; }) {
+    this.blur = $event.type === 'mouseover' ? 'add-blur' : '';
   }
 
   closeBurger() {
-    let element = document.getElementById('hamburger');
-    element.classList.remove('is-active');
+    this.toggleClass('hamburger', 'is-active', false);
     this.active = false;
   }
 
   closeOnLeave() {
-    let navBarNavElement = document.getElementById('navbarNav');
-    navBarNavElement.classList.remove('show');
-    let hamburgerElement = document.getElementById('hamburger');
-    hamburgerElement.classList.remove('is-active');
+    this.toggleClass('navbarNav', 'show', false);
+    this.toggleClass('hamburger', 'is-active', false);
     this.active = false;
+  }
+
+  handleClick(event: Event, position: string): void {
+    this.scrollingToPosition(position);
+    this.changeStyle(event);
+    this.closeBurger();
+  }
+
+  private toggleClass(elementId: string, className: string, add: boolean) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      if (add) {
+        this.renderer.addClass(element, className);
+      } else {
+        this.renderer.removeClass(element, className);
+      }
+    }
   }
 }

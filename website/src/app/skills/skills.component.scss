@@ -1,35 +1,23 @@
 .container {
   border: 2px solid white;
   border-radius: 8px 8px 8px 8px;
+  padding-top: 20px;
 }
 
 .description {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 60px;
+  padding: 0 30px 60px 30px;
   color: white;
   font-weight: 200;
-  margin: 0 auto;
   text-align: center;
-}
-
-#skills-header {
-  padding-top: 20px;
-  color: #346e93;
 }
 
 .carousel:focus {
   outline: none !important;
 }
 
-::ng-deep .carousel-control {
-  margin: 10px;
-}
-
-#skills-subheading h4 {
+.skills-subheading h4 {
   color: white;
   text-transform: uppercase;
-  padding-bottom: 0px;
   font-weight: 200;
   text-align: center;
   padding: 50px;
@@ -46,9 +34,6 @@
   text-transform: uppercase;
 }
 
-.row.heading h4 {
-  font-weight: 200;
-}
 ul {
   margin: 0;
   padding: 0;
@@ -59,6 +44,7 @@ li {
   font-weight: 300;
   margin-bottom: 30px;
   color: #2a2a2a;
+  padding: 0 35px;
 }
 
 a {
@@ -66,11 +52,17 @@ a {
   font-weight: 200;
   font-size: 26px;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+p {
+  padding: 2.5rem;
 }
 
 .heading.heading-icon {
   display: block;
 }
+
 .padding-lg {
   display: block;
 }
@@ -79,16 +71,19 @@ a {
   padding-bottom: 55px;
   padding-top: 55px;
 }
+
 .practice-area .inner {
   border: 1px solid #999999;
   text-align: center;
   margin-bottom: 28px;
   padding: 40px 25px;
 }
+
 .section .cnt-block:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border: solid white 2px;
 }
+
 .practice-area .inner h3 {
   color: white;
   font-size: 40px;
@@ -104,7 +99,6 @@ a {
 }
 
 .practice-area .inner p {
-  font-size: 15px;
   font-size: 3.5vw;
   line-height: 22px;
   font-weight: 400;
@@ -138,66 +132,73 @@ a {
 }
 
 .section .cnt-block figure {
-  width: 148px;
-  height: 148px;
+  min-width: 148px;
+  min-height: 148px;
   border-radius: 100%;
   display: inline-block;
   margin-bottom: 15px;
 }
+
 .section .cnt-block img {
-  width: 170px;
-  height: 170px;
+  max-width: 200px;
+  max-height: 200px;
   margin-left: -10px;
   border-radius: 10%;
   margin-bottom: 20px;
 }
+
 .section .cnt-block h3 {
-  // color: #2a2a2a;
   color: white !important;
   font-size: 26px;
   font-weight: 200;
   padding: 20px 0;
   text-transform: uppercase;
 }
+
 .section .cnt-block h3 a {
   text-decoration: none;
   color: #2a2a2a;
 }
+
 .section .cnt-block h3 a:hover {
   color: #337ab7;
 }
+
 .section .cnt-block p {
   color: white;
   font-weight: 100 !important;
-  font-size: 1.7vh;
-  padding: 0px 40px;
+  font-size: 1.4vh;
+  padding: 0 40px;
 }
+
 .section .cnt-block .follow-us {
   margin: 20px 0 0;
 }
+
 .section .cnt-block .follow-us li {
   display: inline-block;
   width: auto;
   margin: 0 5px;
 }
+
 .section .cnt-block .follow-us li .fa {
   font-size: 24px;
   color: #767676;
 }
+
 .section .cnt-block .follow-us li .fa:hover {
   color: #025a8e;
 }
 
-#left-box-empty-low {
+.left-box-empty-low {
   border-right: 2px solid white;
   height: 50vh;
 }
 
-#right-box-empty-low {
+.right-box-empty-low {
   height: 50vh;
 }
 
-// Card
 .tp-wrapper {
   perspective: 1000px;
 }
@@ -217,8 +218,10 @@ a {
   -webkit-backface-visibility: hidden;
   color: #fff;
   text-align: center;
-  cursor: pointer;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
 }
@@ -236,6 +239,7 @@ a {
   -webkit-transform: rotateY(-180deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  cursor: pointer;
 }
 
 h5 {
@@ -267,8 +271,19 @@ i {
   margin-bottom: 30px;
   width: 100%;
   position: absolute;
+  cursor: pointer;
+}
+
+.projects p {
+  color: inherit !important;
 }
 
 .project-item {
   margin-bottom: 15%;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
 }

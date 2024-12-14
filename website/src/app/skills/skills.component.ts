@@ -12,6 +12,7 @@ interface Skills {
   name: string;
   status: string;
 }
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -44,7 +45,7 @@ interface Skills {
 export class SkillsComponent {
   skillCard: Skills[] = [
     {
-      name: 'html',
+      name: 'vue',
       status: 'inactive',
     },
     {
@@ -52,15 +53,19 @@ export class SkillsComponent {
       status: 'inactive',
     },
     {
+      name: 'html',
+      status: 'inactive',
+    },
+    {
       name: 'python',
       status: 'inactive',
     },
     {
-      name: 'cSharp',
+      name: 'java',
       status: 'inactive',
     },
     {
-      name: 'java',
+      name: 'figma',
       status: 'inactive',
     },
     {

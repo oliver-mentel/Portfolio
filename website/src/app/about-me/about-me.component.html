@@ -1,219 +1,217 @@
 <!-- Boxes About Me -->
 <div (window:resize)="onResize($event)">
-  <!-- If screen is smaller than 992px width, place About Me box first/ above slideshow -->
-  <div *ngIf="!isBiggerThan992px">
-    <section>
-      <div class="container-fluid">
-        <div class="row is-flex">
-          <div
-            class="col-12 col-lg-6"
-            id="right-box"
-            *ngIf="isBiggerThan992px"
-            [ngStyle]="
+    <!-- If screen is smaller than 992px width, place About Me box first/ above slideshow -->
+    <div *ngIf="!isBiggerThan992px">
+        <section>
+            <div class="container-fluid">
+                <div class="row is-flex">
+                    <div
+                            class="col-12 col-lg-6 right-box"
+                            *ngIf="isBiggerThan992px"
+                            [ngStyle]="
               !isBiggerThan992px
                 ? { 'border-bottom': '2px solid white' }
                 : { 'border-right': 'none' }
             "
-          >
-            <div style="display: table">
-              <div style="display: table-cell; vertical-align: middle">
-                <h2 class="heading">About Me</h2>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-12 col-lg-6"
-            id="left-box"
-            [ngStyle]="
+                    >
+                        <div style="display: table">
+                            <div style="display: table-cell; vertical-align: middle">
+                                <h2 class="heading">About Me</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="col-12 col-lg-6 left-box"
+                            [ngStyle]="
               !isBiggerThan992px
                 ? { 'border-right': 'none' }
                 : { 'border-right': '2px solid white' }
             "
-          >
-            <carousel [isAnimated]="true" [interval]="false">
-              <slide>
-                <img
-                  src="assets/Swisscom_logo-2.jpg"
-                  alt="first slide"
-                  class="img-slideshow"
-                />
+                    >
+                        <carousel [isAnimated]="true" [interval]="0">
+                            <slide>
+                                <img
+                                        ngSrc="assets/Swisscom_logo-2.jpg"
+                                        alt="first slide"
+                                        class="img-slideshow"
+                                        height="1312" width="1323"/>
 
-                <div class="carousel-caption">
-                  <div class="text-small">
-                    <h3>Working at Swisscom</h3>
-                    <p>
-                      Since August 2019 I've been working as a software/ web
-                      developer for Swisscom AG, Switzerland's leading
-                      telecommunication company.
-                    </p>
-                  </div>
+                                <div class="carousel-caption">
+                                    <div class="text-small">
+                                        <h3>Working at Swisscom</h3>
+                                        <p>
+                                            Since August 2019 I've been working as a software/ web
+                                            developer for Swisscom AG, Switzerland's leading
+                                            telecommunication company.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/Zürich.jpg"
+                                        alt="second slide"
+                                        class="img-slideshow"
+                                        height="1500" width="1500"/>
+
+                                <div class="carousel-caption">
+                                    <div class="text-small">
+                                        <h3>Living in Zurich</h3>
+                                        <p>
+                                            Never have I thought that someday I would settle down in
+                                            Zurich, but until this day I can't share the thought of
+                                            regretting it. I've moved from Basel to Zurich in 2016,
+                                            back then for University. It became a place of home.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/University_Time .jpg"
+                                        alt="second slide"
+                                        class="img-slideshow"
+                                        height="2000" width="2000"/>
+
+                                <div class="carousel-caption">
+                                    <div class="text-small">
+                                        <h3>Uni Time</h3>
+                                        <p>
+                                            After completing my A-Levels in Basel I spent two
+                                            semesters studying Aerospace Engineering in Sheffield and
+                                            later three semesters studying Geography at Zurich.
+                                            Although I hadn't completed both study courses I further
+                                            deepened my interest in programming, as some modules were
+                                            related to it.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/Arlesheim-Dom-ps.jpg"
+                                        alt="third slide"
+                                        class="img-slideshow"
+                                        height="1402" width="1402"/>
+
+                                <div class="carousel-caption">
+                                    <div class="text-small">
+                                        <h3>Growing Up</h3>
+                                        <p>
+                                            Most of my years I spent growing up in Arlesheim; a small,
+                                            but very charming village located south of Basel,
+                                            Switzerland. There I visited state school until 2011, from
+                                            where I proceeded with my A-Levels in Basel. After
+                                            graduating it was time to head "out of town" and find my
+                                            luck up north in Sheffield, UK.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </div>
                 </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/Zürich.jpg"
-                  alt="second slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <div class="text-small">
-                    <h3>Living in Zurich</h3>
-                    <p>
-                      Never have I thought that someday I would settle down in
-                      Zurich, but until this day I can't share the thought of
-                      regretting it. I've moved from Basel to Zurich in 2016,
-                      back then for University. It became a place of home.
-                    </p>
-                  </div>
-                </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/University_Time .jpg"
-                  alt="second slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <div class="text-small">
-                    <h3>Uni Time</h3>
-                    <p>
-                      After completing my A-Levels in Basel I spent two
-                      semesters studying Aerospace Engineering in Sheffield and
-                      later three semesters studying Geography at Zurich.
-                      Although I hadn't completed both study courses I further
-                      deepened my interest in programming, as some modules were
-                      related to it.
-                    </p>
-                  </div>
-                </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/Arlesheim-Dom-ps.jpg"
-                  alt="third slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <div class="text-small">
-                    <h3>Growing Up</h3>
-                    <p>
-                      Most of my years I spent growing up in Arlesheim; a small,
-                      but very charming village located south of Basel,
-                      Switzerland. There I visited state school until 2011, from
-                      where I proceeded with my A-Levels in Basel. After
-                      graduating it was time to head "out of town" and find my
-                      luck up north in Sheffield, UK.
-                    </p>
-                  </div>
-                </div>
-              </slide>
-            </carousel>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div *ngIf="isBiggerThan992px">
-    <section>
-      <div class="container-fluid">
-        <div class="row is-flex">
-          <div class="col-md-12 col-lg-6" id="left-box">
-            <carousel [isAnimated]="true">
-              <slide>
-                <img
-                  src="assets/Swisscom_logo-2.jpg"
-                  alt="first slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <h3>Working at Swisscom</h3>
-                  <p>
-                    Since August 2019 I've been working as a software/ web
-                    developer& DevOps engineer for Swisscom AG, Switzerland's leading
-                    telecommunication company.
-                  </p>
-                </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/Zürich.jpg"
-                  alt="second slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <h3>Living in Zurich</h3>
-                  <p>
-                    It felt right that someday I would settle down in
-                    Zurich. I can't share the thought of
-                    regretting it. I've moved from Basel to Zurich in 2016, back
-                    then for University. It became a place of home.
-                  </p>
-                </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/University_Time .jpg"
-                  alt="second slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <h3>Uni Time</h3>
-                  <p>
-                    After completing my A-Levels in Basel I spent two semesters
-                    studying Aerospace Engineering in Sheffield and later three
-                    semesters studying Geography at Zurich. Although I hadn't
-                    completed both study courses I further deepened my interest
-                    in programming, as some modules were related to it.
-                  </p>
-                </div>
-              </slide>
-              <slide>
-                <img
-                  src="assets/Arlesheim-Dom-ps.jpg"
-                  alt="third slide"
-                  class="img-slideshow"
-                />
-
-                <div class="carousel-caption">
-                  <h3>Growing Up</h3>
-                  <p>
-                    Most of my years I spent growing up in Arlesheim; a small,
-                    but very charming village located south of Basel,
-                    Switzerland. There I visited state school until 2011, from
-                    where I proceeded with my A-Levels in Basel. After
-                    graduating it was time to head "out of town" and find my
-                    luck up north in Sheffield, UK.
-                  </p>
-                </div>
-              </slide>
-            </carousel>
-          </div>
-          <div class="col-md-12 col-lg-6" id="right-box">
-            <div style="display: table">
-              <div style="display: table-cell; vertical-align: middle">
-                <h2 class="heading">About Me</h2>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Empty row for dashed line-->
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-6" id="left-box-empty"></div>
-        <div class="col-6" id="right-box-empty"></div>
-      </div>
+        </section>
     </div>
-  </section>
+
+    <div *ngIf="isBiggerThan992px">
+        <section>
+            <div class="container-fluid">
+                <div class="row is-flex">
+                    <div class="col-md-12 col-lg-6 left-box">
+                        <carousel [isAnimated]="true">
+                            <slide>
+                                <img
+                                        ngSrc="assets/Swisscom_logo-2.jpg"
+                                        alt="first slide"
+                                        class="img-slideshow"
+                                        height="1312" width="1323"/>
+
+                                <div class="carousel-caption">
+                                    <h3>Working at Swisscom</h3>
+                                    <p>
+                                        Since August 2019 I've been working as a software/ web
+                                        developer& DevOps engineer for Swisscom AG, Switzerland's leading
+                                        telecommunication company.
+                                    </p>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/Zürich.jpg"
+                                        alt="second slide"
+                                        class="img-slideshow"
+                                        height="1500" width="1500"/>
+
+                                <div class="carousel-caption">
+                                    <h3>Living in Zurich</h3>
+                                    <p>
+                                        It felt right that someday I would settle down in
+                                        Zurich. I can't share the thought of
+                                        regretting it. I've moved from Basel to Zurich in 2016, back
+                                        then for University. It became a place of home.
+                                    </p>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/University_Time .jpg"
+                                        alt="second slide"
+                                        class="img-slideshow"
+                                        height="2000" width="2000"/>
+
+                                <div class="carousel-caption">
+                                    <h3>Uni Time</h3>
+                                    <p>
+                                        After completing my A-Levels in Basel I spent two semesters
+                                        studying Aerospace Engineering in Sheffield and later three
+                                        semesters studying Geography at Zurich. Although I hadn't
+                                        completed both study courses I further deepened my interest
+                                        in programming, as some modules were related to it.
+                                    </p>
+                                </div>
+                            </slide>
+                            <slide>
+                                <img
+                                        ngSrc="assets/Arlesheim-Dom-ps.jpg"
+                                        alt="third slide"
+                                        class="img-slideshow"
+                                        height="1402" width="1402"/>
+
+                                <div class="carousel-caption">
+                                    <h3>Growing Up</h3>
+                                    <p>
+                                        Most of my years I spent growing up in Arlesheim; a small,
+                                        but very charming village located south of Basel,
+                                        Switzerland. There I visited state school until 2011, from
+                                        where I proceeded with my A-Levels in Basel. After
+                                        graduating it was time to head "out of town" and find my
+                                        luck up north in Sheffield, UK.
+                                    </p>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </div>
+                    <div class="col-md-12 col-lg-6 right-box">
+                        <div style="display: table">
+                            <div style="display: table-cell; vertical-align: middle">
+                                <h2 class="heading">About Me</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Empty row for dashed line-->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 left-box-empty"></div>
+                <div class="col-6 right-box-empty"></div>
+            </div>
+        </div>
+    </section>
 </div>

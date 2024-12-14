@@ -1,518 +1,585 @@
 <!-- Skills -->
 <section class="section padding-lg">
-  <div class="container">
-    <div class="row heading heading-icon" id="skills-header">
-      <h2>Skills</h2>
-    </div>
-    <div>
-      <h5 class="description">
-        As I've grown as a developer, I had the chance to work alongside
-        developers who have raised my standards for what's expected of any web
-        application. Therefore, I've gained a solid understanding of web and
-        software development, and have also dedicated my free time to apply such
-        concepts.
-      </h5>
-    </div>
-
-    <div id="skills-subheading">
-      <h4>Web- & Software Development</h4>
-    </div>
-
-    <div class="carousel-container">
-      <div class="col-sm-12 col-md-8">
-        <div class="flex-child">
-          <carousel
-            [isAnimated]="true"
-            [noPause]="true"
-            [pauseOnFocus]="true"
-            [noWrap]="false"
-            [interval]="false"
-            class="carousel"
-          >
-
-            <!--- Angular -->
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(1)"
-                        [@flipState]="skillCard[1]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/Angular_full_color_logo.svg"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a href="https://angular.io/docs" target="_blank"
-                                >Angular
-                              </a>
-                            </h3>
-                            <p>
-                              Back in 2019 is when I started developing with
-                              Angular where I got to appreciate the
-                              component-based architecture of this
-                              web-framework, which makes the code more reusable,
-                              maintainable as well as improves readability. I
-                              feel most comfortable with this framework.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block equal-hight">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-edit fa-2x"></i>
-                                  <li>
-                                    GUI Redesigns/ Feature additions and
-                                    Maintenance for Swisscom
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fas fa-desktop fa-2x"></i>
-                                  <li>My Portfolio Website</li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fas fa-book fa-2x"></i>
-                                  <li>
-                                    Online Recipe Book with Backend
-                                    Functionality.
-                                  </li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-
-            <!--- VueJS -->
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(3)"
-                        [@flipState]="skillCard[3]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/VueJS_Logo.svg"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://vuejs.org/"
-                                target="_blank"
-                                >Vue.js</a
-                              >
-                            </h3>
-                            <p>
-                              In order to support the ATLAS Team in Swisscom I was given the chance
-                              to further expand my front-end knowledge by learning Vue.js. In my opinion
-                              the benefits come from its simplicity, reusability and big open community.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block equal-hight">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-edit fa-2x"></i>
-                                  <li>
-                                    Implementation of features, bug fixes and unit-testing
-                                    for SDC (Swisscom Data Console)
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fas fa-gamepad fa-2x"></i>
-                                  <li>
-                                    Clicker Game
-                                  </li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-
-            <!--- HTML, CSS & JS -->
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(0)"
-                        [@flipState]="skillCard[0]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/HTML_CSS_JS.jpg-1.png"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://developer.mozilla.org/en-US/"
-                                target="_blank"
-                                >HTML, CSS & JS</a
-                              >
-                            </h3>
-                            <p>
-                              My initial contact with HTML & CSS was back in my
-                              teen days, spending time redesigning WordPress
-                              sites. After learning the basics of HTML & CSS I
-                              moved on with JavaScript. I have been developing
-                              with JS since 2019, most with TypeScript.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-desktop fa-2x"></i>
-                                  <li>
-                                    My Portfolio Website other
-                                    Projects
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fab fa-instagram fa-2x"></i>
-                                  <li>
-                                    Instagram Clone (programmed with Ruby on
-                                    Rails)
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fab fa-wordpress-simple fa-2x"></i>
-                                  <li>Wordpress websites</li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-
-            <!-- Python -->
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(2)"
-                        [@flipState]="skillCard[2]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/python-logo.png"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://docs.microsoft.com/en-us/dotnet/csharp/"
-                                target="_blank"
-                                >Python</a
-                              >
-                            </h3>
-                            <p>
-                              Python came on me as a fast, easy to learn and
-                              read programming language which I use in
-                              combination with Selenium, a suite of tools for
-                              automating web browsers and the Django framework.
-                              I really adore this language for its simplicity,
-                              application area and its community.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block equal-hight">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-robot fa-2x"></i>
-                                  <li>Selenium Web Browser Automation</li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="far fa-window-maximize fa-2x"></i>
-                                  <li>Web Development with Django Framework</li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-
-            <slide>
-              <div class="text-center text-white">
-                <ul class="row">
-                  <!--- Java -->
-                  <li class="col-sm-12">
-                    <div class="tp-wrapper">
-                      <div
-                        class="tp-box"
-                        (click)="toggleFlipCard(4)"
-                        [@flipState]="skillCard[4]['status']"
-                      >
-                        <div class="tp-box__side tp-box__front">
-                          <div class="cnt-block equal-hight">
-                            <figure>
-                              <img
-                                src="assets/Logo/Java_Logo.jpg.png"
-                                class="img-responsive"
-                                alt=""
-                              />
-                            </figure>
-                            <h3>
-                              <a
-                                href="https://docs.oracle.com/en/java/"
-                                target="_blank"
-                                >Java</a
-                              >
-                            </h3>
-                            <p>
-                              My first contact with Java was through my time at
-                              IT-school in Bern, Switzerland. I have developed
-                              numerous smaller projects with Java to learn the
-                              basics although nothing very sophisticated yet.
-                            </p>
-                            <div class="projects">
-                              <p>Click to see Projects</p>
-                              <i class="fas fa-reply"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tp-box__side tp-box__back">
-                          <div class="cnt-block equal-hight">
-                            <h3 class="header-back">Tasks & Projects</h3>
-                            <h6>
-                              <ul>
-                                <div class="project-item">
-                                  <i class="fas fa-gamepad fa-2x"></i>
-                                  <li>
-                                    Various Games/ Programs (Minesweeper,
-                                    Bomberman etc.)
-                                  </li>
-                                </div>
-                                <div class="project-item">
-                                  <i class="fas fa-crop fa-2x"></i>
-                                  <li>Graphic Editor</li>
-                                </div>
-                              </ul>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </slide>
-          </carousel>
+    <div class="container">
+        <div class="row heading heading-icon">
+            <h2>Skills</h2>
         </div>
-      </div>
-    </div>
+        <div>
+            <h5 class="description">
+                Evolving as a developer, I've collaborated with peers who elevated my benchmarks for web applications. This experience has
+                solidified my grasp of web and software development, and I've committed my personal time to applying these principles.
+            </h5>
+        </div>
 
-    <!--- Second Row Skills-->
-    <div id="skills-subheading">
-      <h4>Automation</h4>
-    </div>
+        <div class="skills-subheading">
+            <h4>Web- & Software Development</h4>
+        </div>
 
-    <ul class="row">
-      <!--- Automation Anywhere -->
-      <li class="col-sm-12 col-md-6 col-lg-6">
-        <div class="tp-wrapper">
-          <div
-            class="tp-box"
-            (click)="toggleFlipCard(5)"
-            [@flipState]="skillCard[5]['status']"
-          >
-            <div class="tp-box__side tp-box__front">
-              <div class="cnt-block equal-hight">
-                <figure>
-                  <img
-                    src="assets/Logo/AA_Logo.jpg.png"
-                    class="img-responsive"
-                    alt=""
-                  />
-                </figure>
-                <h3>
-                  <a
-                    href="https://apeople.automationanywhere.com/s/?language=en_US"
-                    target="_blank"
-                    >Automation Anywhere
-                  </a>
-                </h3>
-                <p>
-                  Through my time at the robotics/ automation department at
-                  Swisscom I had the opportunity to gain knowledge and skills
-                  for this automation software which I also certified on.
-                </p>
-                <div class="projects">
-                  <p>Click to see Projects</p>
-                  <i class="fas fa-reply"></i>
+        <div class="carousel-container">
+            <div class="col-sm-12 col-lg-8">
+                <div class="flex-child">
+                    <carousel
+                            [isAnimated]="true"
+                            [noPause]="true"
+                            [pauseOnFocus]="true"
+                            [noWrap]="false"
+                            [interval]="0"
+                            class="carousel"
+                    >
+                        <!--- VueJS -->
+                        <slide>
+                            <div class="text-center text-white">
+                                <ul class="row">
+                                    <li class="col-sm-12">
+                                        <div class="tp-wrapper">
+                                            <div
+                                                    class="tp-box"
+                                                    (click)="toggleFlipCard(0)"
+                                                    [@flipState]="skillCard[0]['status']"
+                                            >
+                                                <div class="tp-box__side tp-box__front">
+                                                    <div class="cnt-block">
+                                                        <figure>
+                                                            <img
+                                                                    ngSrc="assets/Logo/VueJS_Logo.svg"
+                                                                    class="img-responsive"
+                                                                    alt=""
+                                                                    height="16" width="16"/>
+                                                        </figure>
+                                                        <h3>
+                                                            <a
+                                                                    href="https://vuejs.org/"
+                                                                    target="_blank"
+                                                            >Vue.js</a
+                                                            >
+                                                        </h3>
+                                                        <p>
+                                                            To bolster the ATLAS Team at Swisscom, I delved into Vue.js, which has since
+                                                            become my most used and comfortable JS framework. Its intuitive structure and
+                                                            extensive ecosystem greatly enhance productivity.
+                                                        </p>
+                                                        <div class="projects">
+                                                            <p>Click to see Projects</p>
+                                                            <i class="fas fa-reply"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tp-box__side tp-box__back">
+                                                    <div class="cnt-block">
+                                                        <h3 class="header-back">Tasks & Projects</h3>
+                                                        <h6>
+                                                            <ul>
+                                                                <div class="project-item"><i class="fas fa-edit fa-2x"></i>
+                                                                    <li> Implementation of features and bug fixes for SDC (Swisscom Data
+                                                                        Console), coupled with comprehensive unit testing to ensure robust
+                                                                        application performance.
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item"><i class="fas fa-tachometer-alt fa-2x"></i>
+                                                                    <li> Development and enhancement of SDC Dashboards, User Interface
+                                                                        redesign, and implementation of Self-Service cloud asset management
+                                                                        within the Swisscom Data Console ecosystem.
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item"><i class="fas fa-sync-alt fa-2x"></i>
+                                                                    <li> Management of cloud migration and resource replication, utilizing
+                                                                        SDC as a front-end application to expose diverse services
+                                                                        (Firehose-Kafka, HDFS, S3, Kubernetes) on SBD2 as a self-service
+                                                                        portal.
+                                                                    </li>
+                                                                </div>
+                                                            </ul>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </slide>
+
+                        <!--- Angular -->
+                        <slide>
+                            <div class="text-center text-white">
+                                <ul class="row">
+                                    <li class="col-sm-12">
+                                        <div class="tp-wrapper">
+                                            <div
+                                                    class="tp-box"
+                                                    (click)="toggleFlipCard(1)"
+                                                    [@flipState]="skillCard[1]['status']"
+                                            >
+                                                <div class="tp-box__side tp-box__front">
+                                                    <div class="cnt-block">
+                                                        <figure>
+                                                            <img
+                                                                    ngSrc="assets/Logo/Angular_full_color_logo.svg"
+                                                                    class="img-responsive"
+                                                                    alt=""
+                                                                    height="16" width="16"/>
+                                                        </figure>
+                                                        <h3>
+                                                            <a href="https://angular.io/docs" target="_blank"
+                                                            >Angular
+                                                            </a>
+                                                        </h3>
+                                                        <p>
+                                                            Back in 2019, I started developing with Angular, my first real component-based
+                                                            framework that I felt comfortable with. I appreciated its architecture, which
+                                                            makes the code more reusable, maintainable, and improves readability.
+                                                        </p>
+                                                        <div class="projects">
+                                                            <p>Click to see Projects</p>
+                                                            <i class="fas fa-reply"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tp-box__side tp-box__back">
+                                                    <div class="cnt-block">
+                                                        <h3 class="header-back">Tasks & Projects</h3>
+                                                        <h6>
+                                                            <ul>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-edit fa-2x"></i>
+                                                                    <li>
+                                                                        GUI Redesigns/ Feature additions and
+                                                                        Maintenance for Swisscom
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-desktop fa-2x"></i>
+                                                                    <li>My Portfolio Website</li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-book fa-2x"></i>
+                                                                    <li>
+                                                                        Online Recipe Book with Backend
+                                                                        Functionality.
+                                                                    </li>
+                                                                </div>
+                                                            </ul>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </slide>
+
+                        <!--- HTML, CSS & JS -->
+                        <slide>
+                            <div class="text-center text-white">
+                                <ul class="row">
+                                    <li class="col-sm-12">
+                                        <div class="tp-wrapper">
+                                            <div
+                                                    class="tp-box"
+                                                    (click)="toggleFlipCard(2)"
+                                                    [@flipState]="skillCard[2]['status']"
+                                            >
+                                                <div class="tp-box__side tp-box__front">
+                                                    <div class="cnt-block">
+                                                        <figure>
+                                                            <img
+                                                                    ngSrc="assets/Logo/HTML_CSS_JS.jpg-1.png"
+                                                                    class="img-responsive"
+                                                                    alt=""
+                                                                    height="1080" width="1080"/>
+                                                        </figure>
+                                                        <h3>
+                                                            <a
+                                                                    href="https://developer.mozilla.org/en-US/"
+                                                                    target="_blank"
+                                                            >HTML, CSS & JS</a
+                                                            >
+                                                        </h3>
+                                                        <p>
+                                                            My initial contact with HTML & CSS was back in my
+                                                            teen days, spending time redesigning WordPress
+                                                            sites. After learning the basics of HTML & CSS I
+                                                            moved on with JavaScript. I have been developing
+                                                            with JS since 2019, most with JavaScript.
+                                                        </p>
+                                                        <div class="projects">
+                                                            <p>Click to see Projects</p>
+                                                            <i class="fas fa-reply"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tp-box__side tp-box__back">
+                                                    <div class="cnt-block">
+                                                        <h3 class="header-back">Tasks & Projects</h3>
+                                                        <h6>
+                                                            <ul>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-desktop fa-2x"></i>
+                                                                    <li>
+                                                                        My Portfolio Website other
+                                                                        Projects
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="fab fa-instagram fa-2x"></i>
+                                                                    <li>
+                                                                        Instagram Clone (with Ruby on
+                                                                        Rails)
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="fab fa-wordpress-simple fa-2x"></i>
+                                                                    <li>Wordpress websites</li>
+                                                                </div>
+                                                            </ul>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </slide>
+
+                        <!-- Python -->
+                        <slide>
+                            <div class="text-center text-white">
+                                <ul class="row">
+                                    <li class="col-sm-12">
+                                        <div class="tp-wrapper">
+                                            <div
+                                                    class="tp-box"
+                                                    (click)="toggleFlipCard(3)"
+                                                    [@flipState]="skillCard[3]['status']"
+                                            >
+                                                <div class="tp-box__side tp-box__front">
+                                                    <div class="cnt-block">
+                                                        <figure>
+                                                            <img
+                                                                    ngSrc="assets/Logo/python-logo.png"
+                                                                    class="img-responsive"
+                                                                    alt=""
+                                                                    height="768" width="768"/>
+                                                        </figure>
+                                                        <h3>
+                                                            <a
+                                                                    href="https://docs.microsoft.com/en-us/dotnet/csharp/"
+                                                                    target="_blank"
+                                                            >Python</a
+                                                            >
+                                                        </h3>
+                                                        <p>
+                                                            Python came on me as a fast, easy to learn and
+                                                            read programming language which I used in
+                                                            combination with Selenium, a suite of tools for
+                                                            automating web browsers and the Django framework.
+                                                            I really appreciate this language for its simplicity,
+                                                            application area and its community.
+                                                        </p>
+                                                        <div class="projects">
+                                                            <p>Click to see Projects</p>
+                                                            <i class="fas fa-reply"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tp-box__side tp-box__back">
+                                                    <div class="cnt-block">
+                                                        <h3 class="header-back">Tasks & Projects</h3>
+                                                        <h6>
+                                                            <ul>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-robot fa-2x"></i>
+                                                                    <li>Selenium Web Browser Automation</li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="far fa-window-maximize fa-2x"></i>
+                                                                    <li>Web Development with Django Framework</li>
+                                                                </div>
+                                                            </ul>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </slide>
+
+                        <!--- Java -->
+                        <slide>
+                            <div class="text-center text-white">
+                                <ul class="row">
+                                    <li class="col-sm-12">
+                                        <div class="tp-wrapper">
+                                            <div
+                                                    class="tp-box"
+                                                    (click)="toggleFlipCard(4)"
+                                                    [@flipState]="skillCard[4]['status']"
+                                            >
+                                                <div class="tp-box__side tp-box__front">
+                                                    <div class="cnt-block">
+                                                        <figure>
+                                                            <img
+                                                                    ngSrc="assets/Logo/Java_Logo.jpg.png"
+                                                                    class="img-responsive"
+                                                                    alt=""
+                                                                    height="1080" width="1080"/>
+                                                        </figure>
+                                                        <h3>
+                                                            <a
+                                                                    href="https://docs.oracle.com/en/java/"
+                                                                    target="_blank"
+                                                            >Java</a
+                                                            >
+                                                        </h3>
+                                                        <p>
+                                                            My initial engagement with Java occurred during my studies at IT school in Bern,
+                                                            Switzerland. I have executed numerous minor projects to grasp the essentials of
+                                                            the language, though I have yet to venture into more complex applications.
+                                                        </p>
+                                                        <div class="projects">
+                                                            <p>Click to see Projects</p>
+                                                            <i class="fas fa-reply"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tp-box__side tp-box__back">
+                                                    <div class="cnt-block">
+                                                        <h3 class="header-back">Tasks & Projects</h3>
+                                                        <h6>
+                                                            <ul>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-gamepad fa-2x"></i>
+                                                                    <li>
+                                                                        Various Games/ Programs (Minesweeper,
+                                                                        Bomberman etc.)
+                                                                    </li>
+                                                                </div>
+                                                                <div class="project-item">
+                                                                    <i class="fas fa-crop fa-2x"></i>
+                                                                    <li>Graphic Editor</li>
+                                                                </div>
+                                                            </ul>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </slide>
+                    </carousel>
                 </div>
-              </div>
             </div>
-            <div class="tp-box__side tp-box__back">
-              <div class="cnt-block equal-hight">
-                <h3 class="header-back">Tasks & Projects</h3>
-                <h6>
-                  <ul>
-                    <div class="project-item">
-                      <i class="fas fa-robot fa-2x"></i>
-                      <li>
-                        Various Automation Bots for HR Processes at Swisscom
-                      </li>
-                    </div>
-                    <div class="project-item">
-                      <i class="fas fa-certificate fa-2x"></i>
-                      <li>
-                        Automation Anywhere Certified Advanced RPA Professional
-                        (V11.0)
-                      </li>
-                    </div>
-                  </ul>
-                </h6>
-              </div>
-            </div>
-          </div>
         </div>
-      </li>
 
-      <!--- VBA -->
-      <li class="col-sm-12 col-md-6 col-lg-6">
-        <div class="tp-wrapper">
-          <div
-            class="tp-box"
-            (click)="toggleFlipCard(6)"
-            [@flipState]="skillCard[6]['status']"
-          >
-            <div class="tp-box__side tp-box__front">
-              <div class="cnt-block equal-hight">
-                <figure>
-                  <img
-                    src="assets/Logo/VBA_Logo.png"
-                    class="img-responsive"
-                    alt=""
-                  />
-                </figure>
-                <h3>
-                  <a
-                    href="https://docs.microsoft.com/en-us/office/vba/api/overview/"
-                    target="_blank"
-                    >VBA</a
-                  >
-                </h3>
-                <p>
-                  Visual Basic for Applications was another language I needed to
-                  pick up in the automation world, which improved various steps
-                  with Automation Anywhere in terms of efficiency and
-                  performance. Excel was the main application which I used VBA
-                  for.
-                </p>
-                <div class="projects">
-                  <p>Click to see Projects</p>
-                  <i class="fas fa-reply"></i>
-                </div>
-              </div>
-            </div>
-            <div class="tp-box__side tp-box__back">
-              <div class="cnt-block equal-hight">
-                <h3 class="header-back">Tasks & Projects</h3>
-                <h6>
-                  <ul>
-                    <div class="project-item">
-                      <i class="far fa-file-excel fa-2x"></i>
-                      <li>
-                        Used for various tasks in combination with Automation
-                        Anywhere Bots
-                      </li>
-                    </div>
-                  </ul>
-                </h6>
-              </div>
-            </div>
-          </div>
+        <!--- Second Row Skills-->
+        <div class="skills-subheading">
+            <h4>UI/UX Design</h4>
         </div>
-      </li>
-    </ul>
-  </div>
+
+        <ul class="row d-flex justify-content-center">
+            <!--- Figma -->
+            <li class="col-sm-12 col-lg-8">
+                <div class="tp-wrapper">
+                    <div
+                            class="tp-box"
+                            (click)="toggleFlipCard(5)"
+                            [@flipState]="skillCard[5]['status']"
+                    >
+                        <div class="tp-box__side tp-box__front">
+                            <div class="cnt-block">
+                                <figure>
+                                    <img
+                                            ngSrc="assets/Logo/Figma_Logo.png"
+                                            class="img-responsive"
+                                            alt=""
+                                            height="1025"
+                                            width="683"
+                                    />
+                                </figure>
+                                <h3>
+                                    <a
+                                            href="https://www.figma.com/design/"
+                                            target="_blank"
+                                    >Figma</a>
+                                </h3>
+                                <p>
+                                    Figma is a powerful tool for creating mock-ups and prototypes. I have used it extensively for designing
+                                    user interfaces and creating interactive prototypes.
+                                </p>
+                                <div class="projects">
+                                    <p>Click to see Projects</p>
+                                    <i class="fas fa-reply"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-box__side tp-box__back">
+                            <div class="cnt-block">
+                                <h3 class="header-back">Tasks & Projects</h3>
+                                <h6>
+                                    <ul>
+                                        <div class="project-item">
+                                            <i class="fas fa-pencil-ruler fa-2x"></i>
+                                            <li>
+                                                Created interactive prototypes for various web applications.
+                                            </li>
+                                        </div>
+                                        <div class="project-item">
+                                            <i class="fas fa-palette fa-2x"></i>
+                                            <li>
+                                                Designed user interfaces for mobile and web applications.
+                                            </li>
+                                        </div>
+                                        <div class="project-item">
+                                            <i class="fas fa-certificate fa-2x"></i>
+                                            <li>
+                                                Hold a Diploma and Certification from the UXDI (UX Design Institute) in Product Design.
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!--- Third Row Skills-->
+        <div class="skills-subheading">
+            <h4>Automation</h4>
+        </div>
+
+        <ul class="row">
+            <!--- Automation Anywhere -->
+            <li class="col-sm-12 col-md-6 col-lg-6">
+                <div class="tp-wrapper">
+                    <div
+                            class="tp-box"
+                            (click)="toggleFlipCard(6)"
+                            [@flipState]="skillCard[6]['status']"
+                    >
+                        <div class="tp-box__side tp-box__front">
+                            <div class="cnt-block">
+                                <figure>
+                                    <img
+                                            ngSrc="assets/Logo/AA_Logo.jpg.png"
+                                            class="img-responsive"
+                                            alt=""
+                                            height="1080" width="1080"/>
+                                </figure>
+                                <h3>
+                                    <a
+                                            href="https://apeople.automationanywhere.com/s/?language=en_US"
+                                            target="_blank"
+                                    >Automation Anywhere
+                                    </a>
+                                </h3>
+                                <p>
+                                    During my tenure in the robotics/automation department at Swisscom, I gained substantial knowledge and
+                                    skills in Automation Anywhere, eventually earning certification in this software.
+                                </p>
+                                <div class="projects">
+                                    <p>Click to see Projects</p>
+                                    <i class="fas fa-reply"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-box__side tp-box__back">
+                            <div class="cnt-block">
+                                <h3 class="header-back">Tasks & Projects</h3>
+                                <h6>
+                                    <ul>
+                                        <div class="project-item">
+                                            <i class="fas fa-robot fa-2x"></i>
+                                            <li>
+                                                Various Automation Bots for HR Processes at Swisscom
+                                            </li>
+                                        </div>
+                                        <div class="project-item">
+                                            <i class="fas fa-certificate fa-2x"></i>
+                                            <li>
+                                                Automation Anywhere Certified Advanced RPA Professional
+                                                (V11.0)
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--- VBA -->
+            <li class="col-sm-12 col-md-6 col-lg-6">
+                <div class="tp-wrapper">
+                    <div
+                            class="tp-box"
+                            (click)="toggleFlipCard(7)"
+                            [@flipState]="skillCard[7]['status']"
+                    >
+                        <div class="tp-box__side tp-box__front">
+                            <div class="cnt-block equal-height">
+                                <figure>
+                                    <img
+                                            ngSrc="assets/Logo/VBA_Logo.png"
+                                            class="img-responsive"
+                                            alt=""
+                                            height="1080" width="1080"/>
+                                </figure>
+                                <h3>
+                                    <a
+                                            href="https://docs.microsoft.com/en-us/office/vba/api/overview/"
+                                            target="_blank"
+                                    >VBA</a
+                                    >
+                                </h3>
+                                <p>
+                                    I learned Visual Basic for Applications to enhance steps in Automation Anywhere, boosting efficiency and
+                                    performance, primarily using it in Excel.
+                                </p>
+                                <div class="projects">
+                                    <p>Click to see Projects</p>
+                                    <i class="fas fa-reply"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-box__side tp-box__back">
+                            <div class="cnt-block equal-height">
+                                <h3 class="header-back">Tasks & Projects</h3>
+                                <h6>
+                                    <ul>
+                                        <div class="project-item">
+                                            <i class="far fa-file-excel fa-2x"></i>
+                                            <li>
+                                                Used for various tasks in combination with Automation
+                                                Anywhere Bots
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </section>
 
-<!-- Empty row for dashed line-->
+<!-- Empty row -->
 <section>
-  <div class="container-fluid">
-    <div class="row is-flex">
-      <div class="col-6" id="left-box-empty-low"></div>
-      <div class="col-6" id="right-box-empty-low"></div>
+    <div class="container-fluid">
+        <div class="row is-flex">
+            <div class="col-6 left-box-empty-low"></div>
+            <div class="col-6 right-box-empty-low"></div>
+        </div>
     </div>
-  </div>
 </section>

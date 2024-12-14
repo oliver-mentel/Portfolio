@@ -1,12 +1,12 @@
-#right-box {
+.right-box {
   padding: 0;
   height: 100vh;
   justify-content: center;
 }
 
-#left-box {
+.left-box {
   border-right: 2px solid white;
-  padding: 0px;
+  padding: 0;
   height: 100vh;
 }
 
@@ -20,13 +20,13 @@
   padding-right: 0;
 }
 
-#left-box-empty {
+.left-box-empty {
   border-top: 2px solid white;
   border-right: 2px solid white;
   height: 50vh;
 }
 
-#right-box-empty {
+.right-box-empty {
   border-top: 2px solid white;
   height: 50vh;
 }
